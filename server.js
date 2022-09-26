@@ -22,6 +22,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.static("public"));
 app.use("/css", express.static("/public/css"));
 app.use("/js", express.static("/public/js"));
+app.use("/images", express.static("/public/images"));
 app.use(flash());
 app.set("view engine", "ejs");
 app.use(session({
@@ -32,4 +33,6 @@ app.use(session({
     cookie: {
         maxAge: 1000 * 60 * 60 * 1
     }
-}))
+}));
+
+app.use("/", require("./routes/pages"));
