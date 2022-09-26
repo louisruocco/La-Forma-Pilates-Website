@@ -45,6 +45,7 @@ img {
     align-items: center;
     height: 30vh;
     width: 100%;
+    font-family: 'Raleway', sans-serif;
 }
 
 .title-appear {
@@ -64,12 +65,13 @@ img {
     position: sticky;
     top: 0;
     text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
 
 .nav ul {
     display: flex;
     width: 80%;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin: auto;
     font-family: 'Raleway', sans-serif;
@@ -100,21 +102,17 @@ img {
     padding-bottom: 10%;
 }
 
-.input-section {
+.name-section, .password-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
     width: 40%;
     margin: auto;
     padding: 10px;
-    border-radius: 2%;
 }
 
 .input-section button {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 5%;
     margin: auto;
-    width: 20%;
 }
