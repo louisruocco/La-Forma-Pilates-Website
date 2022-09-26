@@ -15,6 +15,15 @@ img {
     border-radius: 10%;
 }
 
+.admin {
+    padding: 15px;
+    float: right;
+}
+
+.admin i {
+    color: grey;
+}
+
 .title {
     width: 100%;
     height: 80vh;
@@ -23,6 +32,12 @@ img {
     align-items: center;
     font-family: 'Raleway', sans-serif;
     font-size: 30px;
+    opacity: 0;
+}
+
+.title-appear {
+    opacity: 1;
+    transition: 1.5s ease;
 }
 
 .title1 {
@@ -35,7 +50,6 @@ img {
     background: rgb(221, 221, 221);
     position: sticky;
     top: 0;
-    transition: .2s ease;
 }
 
 .nav ul {
@@ -46,26 +60,17 @@ img {
     margin: auto;
     font-family: 'Raleway', sans-serif;
     padding: 20px;
-    transition: 1s ease;
 }
 
 .nav li {
     list-style: none;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
-}
-
-.nav p {
-    display: none;
-    font-size: 16px;
 }
 
 .nav a {
     color: black;
-}
-
-.nav i {
-    transition: 1s ease;
+    text-decoration: none;
 }
 
 .text {
