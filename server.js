@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const ejs = require("ejs");
 const dotenv = require("dotenv");
 const flash = require("connect-flash");
+const users = require("./db/users");
 const app = express();
 
 const port = process.env.PORT || 3000;
@@ -36,3 +37,4 @@ app.use(session({
 }));
 
 app.use("/", require("./routes/pages"));
+app.use("/auth", require("./routes/auth"));

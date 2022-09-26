@@ -4,6 +4,8 @@ const dotenv = require("dotenv");
 const path = require("path");
 const router = express.Router();
 
+dotenv.config({path: "./.env"});
+
 router.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/static/index.html"))
 });
