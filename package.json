@@ -1,0 +1,30 @@
+{
+  "name": "la-forma-pilates-website",
+  "version": "1.0.0",
+  "description": "A Landing Site for La Forma Pilates, a small Pilates class based in North London",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louisruocco/La-Forma-Pilates-Website.git"
+  },
+  "author": "Louis Ruocco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/louisruocco/La-Forma-Pilates-Website/issues"
+  },
+  "homepage": "https://github.com/louisruocco/La-Forma-Pilates-Website#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^3.1.1",
+    "dotenv": "^16.0.2",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.6.1",
+    "nodemon": "^2.0.20"
+  }
+}
