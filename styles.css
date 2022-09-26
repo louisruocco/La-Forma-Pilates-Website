@@ -6,7 +6,12 @@
 }
 
 body {
-    background-image:rgb(254, 219, 225) ;
+    background-image:rgb(251, 200, 208) ;
+}
+
+img {
+    width: 50%;
+    padding: 20px;
 }
 
 .title {
@@ -33,7 +38,7 @@ body {
 
 .nav ul {
     display: flex;
-    width: 80%;
+    width: 60%;
     justify-content: space-between;
     align-items: center;
     margin: auto;
@@ -43,6 +48,12 @@ body {
 
 .nav li {
     list-style: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav a {
+    color: black;
 }
 
 .text {
@@ -50,9 +61,4 @@ body {
     width: 70%;
     margin: auto;
     padding-bottom: 10%;
-}
-
-img {
-    width: 50%;
-    padding: 20px;
 }
