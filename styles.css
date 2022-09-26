@@ -35,6 +35,7 @@ img {
     background: rgb(221, 221, 221);
     position: sticky;
     top: 0;
+    transition: .2s ease;
 }
 
 .nav ul {
@@ -45,6 +46,7 @@ img {
     margin: auto;
     font-family: 'Raleway', sans-serif;
     padding: 20px;
+    transition: 1s ease;
 }
 
 .nav li {
@@ -55,10 +57,15 @@ img {
 
 .nav p {
     display: none;
+    font-size: 16px;
 }
 
 .nav a {
     color: black;
+}
+
+.nav i {
+    transition: 1s ease;
 }
 
 .text {
