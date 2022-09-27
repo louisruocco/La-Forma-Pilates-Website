@@ -9,7 +9,7 @@ dotenv.config({path: "./.env"});
 
 router.post("/login", async (req, res) => {
     const { username, password } = req.body;
-    const user = await users.findOne({name: username});
+    const user = await users.find({name: username});
 
     if(user[0] === undefined){
         return res.send("User Not Found");
@@ -22,7 +22,6 @@ router.post("/login", async (req, res) => {
     } else {
         res.send("Home Page");
     }
-    
 })
 
 module.exports = router;
