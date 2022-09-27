@@ -7,7 +7,15 @@ const router = express.Router();
 
 dotenv.config({path: "./.env"});
 
-router.post("/login", async (req, res) => {
+const redirectHome = (req, res, next) => {
+    if(req.session.userId){
+        return res.redirect("/admin/dashboard");
+    } else {
+        next();
+    }
+}
+
+router.post("/login",redirectHome, async (req, res) => {
     const { username, password } = req.body;
     const user = await users.find({name: username});
 
@@ -20,7 +28,8 @@ router.post("/login", async (req, res) => {
     if(!user || !bcryptCompare){
         return res.send("User Not found");
     } else {
-        res.send("Home Page");
+        req.session.userId = user[0].id;
+        res.redirect("/admin/dashboard");
     }
 })
 
