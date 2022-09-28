@@ -1,6 +1,7 @@
 const express = require("express");
 const session = require("express-session");
 const clients = require("../db/clients");
+const invoices = require("../db/invoice");
 const dotenv = require("dotenv");
 const path = require("path");
 const router = express.Router();
@@ -42,5 +43,16 @@ router.get("/admin/client/:name/:surname", redirectLogin, async (req, res) => {
     })
     res.render("client", {person});
 });
+
+router.get("/admin/client/:name/:surname/add-invoice", redirectLogin, async (req, res) => {
+    const person = await clients.find({
+        $and: [
+            {name: req.params.name}, 
+            {surname: req.params.surname}
+        ]
+    })
+
+    res.render("invoice", {person});
+})
 
 module.exports = router;

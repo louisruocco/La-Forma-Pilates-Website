@@ -4,6 +4,7 @@ const users = require("../db/users");
 const clients = require("../db/clients");
 const bcrypt = require("bcrypt");
 const dotenv = require("dotenv");
+const invoices = require("../db/invoice");
 const router = express.Router();
 
 dotenv.config({path: "./.env"});
@@ -68,6 +69,21 @@ router.post("/add-client", async (req, res) => {
 
         res.redirect("/admin/dashboard");
       }
+});
+
+router.post("/admin/client/:name/:surname/add-invoice", async (req, res) => {
+    const { date, time, status } = req.body;
+    await invoices.create({
+        name: req.params.name, 
+        surname: req.params.surname, 
+        date: date, 
+        time: time,
+        status: status
+    })
+
+    console.log("added invoice");
+
+    res.render("back");
 })
 
 module.exports = router;
