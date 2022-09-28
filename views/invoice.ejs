@@ -20,7 +20,7 @@
        <h1> Add Invoice for <%= person[0].name %> <%= person[0].surname %></h1>
     </div>
     <div class="input-section">
-        <form action="/admin/client/<%= person[0].name %>/<%= person[0].surname %>/add-invoice" method = "POST">
+        <form action="/auth/admin/client/<%= person[0].name %>/<%= person[0].surname %>/add-invoice" method = "POST">
             <div class="date-section">
                 <span class = "input-group-text">Date</span>
                 <input class = "form-control" type="text" name = "date" required placeholder = "dd month yyyy">
@@ -29,11 +29,15 @@
                 <span class = "input-group-text">Duration of Session</span>
                 <input class = "form-control" type="text" name = "time" required>
             </div>
+            <div class="cost-section">
+                <span class = "input-group-text">Amount</span>
+                <input class = "form-control" type="text" name = "amount" required>
+            </div>
             <div class="status-section">
                 <span class = "input-group-text">Status</span>
-                <input class = "form-control" type="text" name = "time" required>
+                <input class = "form-control" type="text" name = "status" required>
             </div>
-            <button>Add Invoice</button>
+            <button>Add</button>
         </form>
     </div>
 </body>

@@ -41,7 +41,14 @@ router.get("/admin/client/:name/:surname", redirectLogin, async (req, res) => {
             {surname: req.params.surname}
         ]
     })
-    res.render("client", {person});
+
+    const history = await invoices.find({
+        $and: [
+            {name: req.params.name}, 
+            {surname: req.params.surname}
+        ]
+    })
+    res.render("client", {person, history});
 });
 
 router.get("/admin/client/:name/:surname/add-invoice", redirectLogin, async (req, res) => {

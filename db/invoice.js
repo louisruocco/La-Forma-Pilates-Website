@@ -11,7 +11,8 @@ const invoiceSchema = new mongoose.Schema({
     name: String, 
     surname: String, 
     date: String,
-    time: String, 
+    time: Number, 
+    amount: Number,
     status: String
 });
 

@@ -67,23 +67,27 @@ router.post("/add-client", async (req, res) => {
             }
         })
 
-        res.redirect("/admin/dashboard");
+        res.redirect("back");
       }
 });
 
 router.post("/admin/client/:name/:surname/add-invoice", async (req, res) => {
-    const { date, time, status } = req.body;
+    const { date, time, amount, status } = req.body;
     await invoices.create({
         name: req.params.name, 
         surname: req.params.surname, 
         date: date, 
         time: time,
+        amount: amount,
         status: status
-    })
+    });
 
-    console.log("added invoice");
+    res.redirect(`/admin/client/${req.params.name}/${req.params.surname}`);
+});
 
-    res.render("back");
+router.post("/:name/:surname/:id/delete-invoice", async (req, res) => {
+    await invoices.deleteOne({id: req.params.id})
+    res.redirect("back");
 })
 
 module.exports = router;
