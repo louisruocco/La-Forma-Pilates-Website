@@ -27,4 +27,8 @@ router.get("/admin/dashboard", redirectLogin, (req, res) => {
     res.render("home");
 });
 
+router.get("/admin/dashboard/add-client", redirectLogin, (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/static/add-client.html"));
+});
+
 module.exports = router;
