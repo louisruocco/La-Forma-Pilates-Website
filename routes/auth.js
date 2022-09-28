@@ -66,7 +66,7 @@ router.post("/add-client", async (req, res) => {
             }
         })
 
-        res.render("back");
+        res.redirect("/admin/dashboard");
       }
 })
 
