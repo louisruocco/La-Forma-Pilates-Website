@@ -31,6 +31,17 @@ router.post("/login",redirectHome, async (req, res) => {
         req.session.userId = user[0].id;
         res.redirect("/admin/dashboard");
     }
+});
+
+router.post("/logout", (req, res) => {
+    req.session.destroy((err) => {
+        if(err){
+            return res.redirect("/home");
+        } else {
+            res.clearCookie(process.env.SESS_NAME);
+            res.redirect("/");
+        }
+    })
 })
 
 module.exports = router;
