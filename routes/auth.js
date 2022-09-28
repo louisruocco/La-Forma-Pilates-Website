@@ -1,6 +1,7 @@
 const express = require("express");
 const session = require("express-session");
 const users = require("../db/users");
+const clients = require("../db/clients");
 const bcrypt = require("bcrypt");
 const dotenv = require("dotenv");
 const router = express.Router();
@@ -42,6 +43,31 @@ router.post("/logout", (req, res) => {
             res.redirect("/");
         }
     })
+});
+
+router.post("/add-client", async (req, res) => {
+    const { name, surname, street, postcode } = req.body;
+    const client = await clients.find({
+        $and: [
+            {name: name}, 
+            {surname: surname}
+        ]
+    })
+
+    if(client.length > 0){
+        return res.send("Client already Exists");
+    } else {
+        await clients.create({
+            name: name, 
+            surname: surname, 
+            address: {
+                street: street, 
+                postcode: postcode
+            }
+        })
+
+        res.render("back");
+      }
 })
 
 module.exports = router;
