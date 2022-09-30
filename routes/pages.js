@@ -63,7 +63,8 @@ router.get("/admin/client/:name/:surname/add-invoice", redirectLogin, async (req
 });
 
 router.get("/:name/:surname/:id/edit-invoice", async (req, res) => {
-    const invoice = await invoices.find({id: req.params.id});
+    const invoice = await invoices.find({name: req.params.name, surname: req.params.surname, id: req.params.id});
+    console.log(invoice)
     res.render("edit", {invoice});
 })
 

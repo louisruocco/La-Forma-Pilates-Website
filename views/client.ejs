@@ -26,8 +26,8 @@
         </div>
         <ul>
             <% history.forEach(invoice => { %>
-                <li>
-                    <%= invoice.date %>: £<%= invoice.amount %> - <%= invoice.status %>
+                <li class = "invoice">
+                    <%= invoice.date %>: £<%= invoice.amount %> - <span class = "invoice-status"><%= invoice.status %></span>
                     <form action="/auth/<%= invoice.name %>/<%= invoice.surname %>/<%= invoice.id %>/delete-invoice" method = "POST">
                         <a href="/<= invoice.name %>/<%= invoice.surname %>/<%=invoice.id %>/edit-invoice">
                             <i class="fa-solid fa-pen-to-square"></i>
@@ -40,5 +40,6 @@
             <% }) %>
         </ul>
     </div>
+    <script src = "/js/app.js"></script>
 </body>
 </html>
