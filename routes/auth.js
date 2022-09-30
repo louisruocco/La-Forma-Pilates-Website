@@ -88,11 +88,13 @@ router.post("/admin/client/:name/:surname/add-invoice", async (req, res) => {
 
 router.post("/admin/:name/:surname/:id/edit-invoice", async (req, res) => {
     const {date, time, amount, status} = req.body;
-    const updateInvoice = await invoices.updateOne({id: req.params.id}, {date: date, time: time, amount: amount, status: status});
-    console.log(updateInvoice);
-    // const person = users.find({name: req.params.name, surname: req.params.surname});
-    // console.log(person);
-    // res.render("client", {person});
+    const updateInvoice = await invoices.updateOne({id: req.params.id}, {
+        date: date, 
+        time: time, 
+        amount: amount, 
+        status: status
+    });
+    res.redirect(`/admin/client/${req.params.name}/${req.params.surname}`);
 
     //add flash message for update successful
 })
