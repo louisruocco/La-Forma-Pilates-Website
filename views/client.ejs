@@ -28,8 +28,8 @@
             <% history.forEach(invoice => { %>
                 <li>
                     <%= invoice.date %>: £<%= invoice.amount %> - <%= invoice.status %>
-                    <form action="/auth/<%= person[0].name %>/<%= person[0].surname %>/<%= invoice.id %>/delete-invoice" method = "POST">
-                        <a href="">
+                    <form action="/auth/<%= invoice.name %>/<%= invoice.surname %>/<%= invoice.id %>/delete-invoice" method = "POST">
+                        <a href="/<= invoice.name %>/<%= invoice.surname %>/<%=invoice.id %>/edit-invoice">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </a>
                         <button>

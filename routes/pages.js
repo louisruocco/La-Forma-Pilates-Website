@@ -60,6 +60,11 @@ router.get("/admin/client/:name/:surname/add-invoice", redirectLogin, async (req
     })
 
     res.render("invoice", {person});
+});
+
+router.get("/:name/:surname/:id/edit-invoice", async (req, res) => {
+    const invoice = await invoices.find({id: req.params.id});
+    res.render("edit", {invoice});
 })
 
 module.exports = router;

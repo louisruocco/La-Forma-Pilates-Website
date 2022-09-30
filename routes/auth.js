@@ -85,6 +85,10 @@ router.post("/admin/client/:name/:surname/add-invoice", async (req, res) => {
     res.redirect(`/admin/client/${req.params.name}/${req.params.surname}`);
 });
 
+router.post("/admin/client/:name/:surname/edit-invoice", (req, res) => {
+    console.log("changes saved...");
+})
+
 router.post("/:name/:surname/:id/delete-invoice", async (req, res) => {
     await invoices.deleteOne({id: req.params.id})
     res.redirect("back");
