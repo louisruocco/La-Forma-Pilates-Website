@@ -83,15 +83,23 @@ router.post("/admin/client/:name/:surname/add-invoice", async (req, res) => {
     });
 
     res.redirect(`/admin/client/${req.params.name}/${req.params.surname}`);
+    //add flash messaged for add invoice
 });
 
-router.post("/admin/client/:name/:surname/edit-invoice", (req, res) => {
-    console.log("changes saved...");
+router.post("/admin/:name/:surname/:id/edit-invoice", async (req, res) => {
+    const {date, time, amount, status} = req.body;
+    const updateInvoice = await invoices.updateOne({id: req.params.id}, {date: date, time: time, amount: amount, status: status});
+    console.log(updateInvoice);
+    // const person = users.find({name: req.params.name, surname: req.params.surname});
+    // console.log(person);
+    // res.render("client", {person});
+
+    //add flash message for update successful
 })
 
 router.post("/:name/:surname/:id/delete-invoice", async (req, res) => {
     await invoices.deleteOne({id: req.params.id})
     res.redirect("back");
-})
+});
 
 module.exports = router;
