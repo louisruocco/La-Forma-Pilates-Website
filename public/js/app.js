@@ -10,4 +10,6 @@ console.log(invoice.textContent);
 
 if(invoice.textContent = "Pending"){
     invoiceItem.style.background = "rgba(255, 230, 0, 0.644)";
+} else {
+    invoiceItem.style.background = "seagreen"
 }
