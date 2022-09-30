@@ -24,6 +24,10 @@ img {
     border-radius: 10%;
 }
 
+li {
+    list-style: none;
+}
+
 .admin {
     padding: 15px;
     float: right;
@@ -47,9 +51,15 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vh;
+    height: 20vh;
     width: 100%;
     font-family: 'Raleway', sans-serif;
+}
+
+.admin-subtitle {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
 .title-appear {
@@ -127,4 +137,36 @@ img {
     align-items: center;
     width: 5%;
     margin: auto;
+}
+
+.clients ul, .invoices ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.invoices li {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin: 20px;
+    background: rgb(233, 233, 233);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.invoices a {
+    padding: 10px;
+    font-size: 20px;
+    color: seagreen;
+}
+
+.invoices button {
+    background: none;
+    font-size: 20px;
+    color: red;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }

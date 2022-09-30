@@ -22,7 +22,9 @@
         <h1>Admin Dashboard</h1>
     </div>
     <div class="clients">
-        <h2>Clients</h2>
+        <div class="admin-subtitle">
+            <h2>Clients</h2>
+        </div>
         <ul>
             <% findClients.forEach(client => { %>
                 <li><a href="/admin/client/<%=client.name%>/<%= client.surname %>"><%= client.name %> <%= client.surname %></a></li>
