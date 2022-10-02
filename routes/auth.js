@@ -88,19 +88,20 @@ router.post("/admin/client/:name/:surname/add-invoice", async (req, res) => {
 
 router.post("/admin/:name/:surname/:id/edit-invoice", async (req, res) => {
     const {date, time, amount, status} = req.body;
-    const updateInvoice = await invoices.updateOne({id: req.params.id}, {
+    const updateInvoice = await invoices.updateOne({_id: req.params.id}, {
         date: date, 
         time: time, 
         amount: amount, 
         status: status
     });
+
     res.redirect(`/admin/client/${req.params.name}/${req.params.surname}`);
 
     //add flash message for update successful
 })
 
 router.post("/:name/:surname/:id/delete-invoice", async (req, res) => {
-    await invoices.deleteOne({id: req.params.id})
+    await invoices.deleteOne({_id: req.params.id})
     res.redirect("back");
 });
 
