@@ -171,11 +171,3 @@ li {
     outline: none;
     cursor: pointer;
 }
-
-.pending {
-    background-color: yellow;
-}
-
-.complete {
-    background: seagreen;
-}
