@@ -88,7 +88,7 @@ router.post("/admin/client/:name/:surname/add-invoice", async (req, res) => {
 
 router.post("/admin/:name/:surname/:id/edit-invoice", async (req, res) => {
     const {date, time, amount, status} = req.body;
-    const updateInvoice = await invoices.updateOne({_id: req.params.id}, {
+    await invoices.updateOne({_id: req.params.id}, {
         date: date, 
         time: time, 
         amount: amount, 
