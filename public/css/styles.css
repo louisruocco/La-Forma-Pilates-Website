@@ -144,7 +144,7 @@ li {
     align-items: center;
 }
 
-.invoices li {
+.clients li, .invoices li {
     display: flex;
     width: 60%;
     justify-content: space-between;
@@ -155,13 +155,17 @@ li {
     font-size: 25px;
 }
 
-.invoices a {
+.clients a {
+    text-decoration: none;
+}
+
+.invoices a, .edit {
     padding: 10px;
     font-size: 20px;
     color: seagreen;
 }
 
-.invoices button {
+.invoices button, .trash {
     background: none;
     font-size: 20px;
     color: red;
