@@ -67,7 +67,6 @@ li {
 
 .title1 {
     text-align: center;
-    
     padding: 40px;
     font-size: 22px;
 }
@@ -86,13 +85,12 @@ li {
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    
     padding: 20px;
 }
 
 .nav li {
     list-style: none;
-    font-size: 18px;
+    font-size: 15px;
     text-align: center;
 }
 
