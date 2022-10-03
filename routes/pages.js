@@ -36,7 +36,6 @@ router.get("/admin/dashboard/add-client", redirectLogin, (req, res) => {
 
 router.get("/admin/client/:name/:surname", redirectLogin, async (req, res) => {
     const person = await clients.find({name: req.params.name, surname: req.params.surname})
-
     const history = await invoices.find({
         $and: [
             {name: req.params.name}, 
@@ -45,6 +44,12 @@ router.get("/admin/client/:name/:surname", redirectLogin, async (req, res) => {
     })
     res.render("client", {person, history});
 });
+
+router.get("/admin/client/:name/:surname/edit-client", redirectLogin, async (req, res) => {
+    const client = await clients.find({name: req.params.name, surname: req.params.surname});
+    console.log(client);
+    res.render("edit-client", {client});
+})
 
 router.get("/admin/client/:name/:surname/add-invoice", redirectLogin, async (req, res) => {
     const person = await clients.find({
@@ -59,7 +64,7 @@ router.get("/admin/client/:name/:surname/add-invoice", redirectLogin, async (req
 
 router.get("/admin/client/:name/:surname/:id/edit-invoice", async (req, res) => {
     const invoice = await invoices.find({_id: req.params.id});
-    res.render("edit", {invoice});
-})
+    res.render("edit-invoice", {invoice});
+});
 
 module.exports = router;
