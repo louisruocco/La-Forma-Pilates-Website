@@ -6,10 +6,10 @@ window.addEventListener("load", () => {
 });
 
 invoiceItem.forEach(item => {
-    if(item.children[0].textContent === "Pending"){
+    if(item.children[1].textContent === "pending"){
         item.style.background = "rgb(255, 204, 0)"
     } else {
         item.style.background = "seagreen"
-        item.children[1].children[0].style.color = "black"
+        item.children[2].children[0].style.color = "black"
     }
 })
