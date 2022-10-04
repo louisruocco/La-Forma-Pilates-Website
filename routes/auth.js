@@ -105,4 +105,18 @@ router.post("/:name/:surname/:id/delete-invoice", async (req, res) => {
     res.redirect("back");
 });
 
+router.post("/admin/client/:id/edit-profile", async (req, res) => {
+    const { name, surname, street, postcode } = req.body;
+    await clients.updateOne({_id: req.params.id}, {
+        name: name, 
+        surname: surname, 
+        address: {
+            street: street, 
+            postcode: postcode
+        }
+    })
+    console.log(postcode);
+    res.send("User credentials successfully updated");
+})
+
 module.exports = router;

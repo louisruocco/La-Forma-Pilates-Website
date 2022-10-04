@@ -20,7 +20,7 @@
         <h1><%= client[0].name %>'s Profile</h1>
     </div>
     <div class="input-section">
-        <form action="">
+        <form action="/auth/admin/client/<%= client[0].id %>/edit-profile" method = "POST">
             <div class="name-section">
                 <span class = "input-group-text">Name:</span>
                 <input class = "form-control" type="text" name = "name" value = <%= client[0].name %>>
@@ -31,9 +31,9 @@
             </div>
             <div class="address-section">
                 <span class = "input-group-text">Street Name:</span>
-                <input class = "form-control" type="text" name = "street" value = <%= client[0].address.street %>>
+                <input class = "form-control" type="text" name = "street" value = "<%= client[0].address.street %>">
                 <span class = "input-group-text">Postcode:</span>
-                <input class = "form-control" type="text" name = "postcode" value = <%= client[0].address.postcode %>>
+                <input class = "form-control" type="text" name = "postcode" value = "<%= client[0].address.postcode %>">
             </div>
             <button>Save Changes</button>
         </form>
