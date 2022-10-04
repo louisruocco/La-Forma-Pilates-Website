@@ -14,7 +14,10 @@ html {
 }
 
 body {
-    background-image:rgb(251, 200, 208) ;
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 img {
@@ -36,14 +39,26 @@ li {
     color: grey;
 }
 
-.title {
+.overlay {
     width: 100%;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    opacity: .5;
+    z-index: -1;
+}
+
+.title {
+    width: 95%;
     height: 80vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    margin: auto;
     font-size: 30px;
     opacity: 0;
+    color: white;
+    padding: 10px;
 }
 
 .admin-title {
@@ -70,14 +85,14 @@ li {
     text-align: center;
     padding: 40px;
     font-size: 22px;
+    color: white;
 }
 
 .nav {
-    background: rgb(221, 221, 221);
+    background: black;
     position: sticky;
     top: 0;
     text-align: center;
-    
 }
 
 .nav ul {
@@ -96,9 +111,9 @@ li {
 }
 
 .nav a {
-    color: black;
     text-decoration: none;
     transition: .2s ease;
+    color: purple;
 }
 
 .nav a:hover {
@@ -106,11 +121,41 @@ li {
     transition: .2s ease;
 }
 
+.about h2, .what-we-offer h2, .contact h2 {
+    margin-top: 15%;
+}
+
 .text {
     display: flex;
-    width: 70%;
+    width: 80%;
     margin: auto;
+    box-shadow:rgba(0,0,0,0.5) 0px 0px 5px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 15px;
+    text-align: justify;
+    color: white;
+}
+
+.offer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
     padding-bottom: 10%;
+    outline: 1px solid grey;
+    border-radius: 5px;
+    box-shadow:rgba(0,0,0,0.5) 0px 0px 5px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    text-align: justify;
+    color: white;
+}
+
+.offer h3, .offer h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .name-section, .password-section, .surname-section {
