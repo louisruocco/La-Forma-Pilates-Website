@@ -169,6 +169,7 @@ li {
     padding: 10px;
     font-size: 20px;
     color: seagreen;
+    transition: .1s ease;
 }
 
 .invoices button, .trash {
@@ -178,8 +179,19 @@ li {
     border: none;
     outline: none;
     cursor: pointer;
+    transition: .1s ease;
 }
 
 .invoice-status {
     text-transform: capitalize ;
+}
+
+.edit:hover {
+    color: white;
+    transition: .1s ease;
+}
+
+.trash:hover {
+    color: white;
+    transition: .1s ease;
 }
