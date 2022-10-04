@@ -205,3 +205,42 @@ li {
     align-items: center;
     margin: auto;
 }
+
+.choice button {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 40px;
+    border-radius: 5px;
+    background: red;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.choice a {
+    font-size: 20px;
+    padding: 40px;
+    border-radius: 5px;
+    background: seagreen;
+    text-decoration: none;
+    color: black;
+    transition: .3s ease;
+}
+
+.choice a:hover, .choice button:hover {
+    transition: .3s ease;
+    transform: scale(1.05);
+}
+
+.nav button {
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: none;
+}
+
+.nav button:hover {
+    color: red;
+    transition: .2s ease;
+    cursor: pointer;
+}

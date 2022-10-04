@@ -129,7 +129,7 @@ router.post("/admin/client/:id/edit-profile", redirectLogin, async (req, res) =>
 
 router.post("/:name/:surname/:id/delete-client", redirectLogin, async (req, res) => {
     await clients.deleteOne({_id: req.params.id})
-    await invoices.deleteAll
+    await invoices.remove({name: req.params.name, surname: req.params.surname})
     res.redirect("/admin/dashboard");
 })
 
