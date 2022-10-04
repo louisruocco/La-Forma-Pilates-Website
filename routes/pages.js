@@ -50,12 +50,12 @@ router.get("/admin/client/:name/:surname/add-invoice", redirectLogin, async (req
     res.render("invoice", {person});
 });
 
-router.get("/admin/client/:name/:surname/:id/edit-invoice", async (req, res) => {
+router.get("/admin/client/:name/:surname/:id/edit-invoice", redirectLogin, async (req, res) => {
     const invoice = await invoices.find({_id: req.params.id});
     res.render("edit-invoice", {invoice});
 });
 
-router.get("/:id/delete-client", async (req, res) => {
+router.get("/:id/delete-client", redirectLogin, async (req, res) => {
     const client = await clients.find({_id: req.params.id})
     res.render("delete-client", {client});
 })

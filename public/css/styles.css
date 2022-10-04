@@ -196,3 +196,12 @@ li {
     color: white;
     transition: .1s ease;
 }
+
+.choice {
+    display: flex;
+    width: 30%;
+    height: 40vh;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}

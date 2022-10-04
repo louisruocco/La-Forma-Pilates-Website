@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>La Forma Pilates | Delete <%= client[0].name %>'s Profile</title>
 </head>
 <body>
+    <div class="nav">
+        <ul>
+            <li><a href="/admin/dashboard">Back to Dashboard</a></li>
+            <form action="/auth/logout" method = "POST">
+                <button>Logout</button>
+            </form>
+        </ul>
+    </div>
     <div class="admin-title">
         <h1>Are you sure you want to delete <%= client[0].name %>'s Profile and all their records, including invoice History?</h1>
     </div>
     <div class="choice">
-        <form action="">
+        <form action="/auth/<%= client[0].name %>/<%= client[0].surname %>/<%= client[0].id %>/delete-client" method = "POST">
             <button>Yes</button>
         </form>
-        <a href="">No</a>
+        <a href="/admin/dashboard">No</a>
     </div>
 </body>
 </html>

@@ -17,7 +17,15 @@ const redirectHome = (req, res, next) => {
     }
 }
 
-router.post("/login",redirectHome, async (req, res) => {
+const redirectLogin = (req, res, next) => {
+    if(!req.session.userId){
+        return res.redirect("/admin")
+    } else {
+        next();
+    }
+}
+
+router.post("/login", redirectHome, async (req, res) => {
     const { username, password } = req.body;
     const user = await users.find({name: username});
 
@@ -46,7 +54,7 @@ router.post("/logout", (req, res) => {
     })
 });
 
-router.post("/add-client", async (req, res) => {
+router.post("/add-client", redirectLogin, async (req, res) => {
     const { name, surname, street, postcode } = req.body;
     const client = await clients.find({
         $and: [
@@ -71,7 +79,7 @@ router.post("/add-client", async (req, res) => {
       }
 });
 
-router.post("/admin/client/:name/:surname/add-invoice", async (req, res) => {
+router.post("/admin/client/:name/:surname/add-invoice", redirectLogin, async (req, res) => {
     const { date, time, amount, status } = req.body;
     await invoices.create({
         name: req.params.name, 
@@ -86,7 +94,7 @@ router.post("/admin/client/:name/:surname/add-invoice", async (req, res) => {
     //add flash messaged for add invoice
 });
 
-router.post("/admin/:name/:surname/:id/edit-invoice", async (req, res) => {
+router.post("/admin/:name/:surname/:id/edit-invoice", redirectLogin, async (req, res) => {
     const {date, time, amount, status} = req.body;
     await invoices.updateOne({_id: req.params.id}, {
         date: date, 
@@ -100,12 +108,12 @@ router.post("/admin/:name/:surname/:id/edit-invoice", async (req, res) => {
     //add flash message for update successful
 })
 
-router.post("/:name/:surname/:id/delete-invoice", async (req, res) => {
+router.post("/:name/:surname/:id/delete-invoice",redirectLogin, async (req, res) => {
     await invoices.deleteOne({_id: req.params.id})
     res.redirect("back");
 });
 
-router.post("/admin/client/:id/edit-profile", async (req, res) => {
+router.post("/admin/client/:id/edit-profile", redirectLogin, async (req, res) => {
     const { name, surname, street, postcode } = req.body;
     await clients.updateOne({_id: req.params.id}, {
         name: name, 
@@ -117,6 +125,12 @@ router.post("/admin/client/:id/edit-profile", async (req, res) => {
     })
     console.log(postcode);
     res.send("User credentials successfully updated");
+});
+
+router.post("/:name/:surname/:id/delete-client", redirectLogin, async (req, res) => {
+    await clients.deleteOne({_id: req.params.id})
+    await invoices.deleteAll
+    res.redirect("/admin/dashboard");
 })
 
 module.exports = router;
