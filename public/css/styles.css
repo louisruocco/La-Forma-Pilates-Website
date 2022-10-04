@@ -52,6 +52,7 @@ li {
     align-items: center;
     height: 20vh;
     width: 100%;
+    text-align: center;
 }
 
 .admin-subtitle {
