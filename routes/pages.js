@@ -55,4 +55,9 @@ router.get("/admin/client/:name/:surname/:id/edit-invoice", async (req, res) => 
     res.render("edit-invoice", {invoice});
 });
 
+router.get("/:id/delete-client", async (req, res) => {
+    const client = await clients.find({_id: req.params.id})
+    res.render("delete-client", {client});
+})
+
 module.exports = router;
