@@ -1,12 +1,16 @@
 @font-face {
     font-family: Bicubik;
-    src: url("/css/Bicubik-71qR.otf") format("opentype");
+    src: url("Bicubik-71qR.otf") format("opentype");
+}
+
+@font-face {
+    font-family: TT Fors;
+    src: url("Fontspring-DEMO-tt_fors_regular.otf") format("opentype");
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: Bicubik;
 }
 
 html {
@@ -44,21 +48,8 @@ li {
     height: 100vh;
     background: black;
     position: fixed;
-    opacity: .5;
+    opacity: .7;
     z-index: -1;
-}
-
-.title {
-    width: 95%;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    font-size: 30px;
-    opacity: 0;
-    color: white;
-    padding: 10px;
 }
 
 .admin-title {
@@ -68,6 +59,7 @@ li {
     height: 20vh;
     width: 100%;
     text-align: center;
+    font-family: Bicubik;
 }
 
 .admin-subtitle {
@@ -76,23 +68,20 @@ li {
     padding: 20px;
 }
 
-.title-appear {
-    opacity: 1;
-    transition: 1.5s ease;
-}
-
 .title1 {
     text-align: center;
     padding: 40px;
     font-size: 22px;
     color: white;
+    font-family: Bicubik;
 }
 
 .nav {
-    background: black;
+    background-image: linear-gradient(120deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
     position: sticky;
     top: 0;
     text-align: center;
+    font-family: Bicubik;
 }
 
 .nav ul {
@@ -106,7 +95,7 @@ li {
 
 .nav li {
     list-style: none;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -126,36 +115,27 @@ li {
 }
 
 .text {
-    display: flex;
-    width: 80%;
+    width: 70%;
     margin: auto;
-    box-shadow:rgba(0,0,0,0.5) 0px 0px 5px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 5px;
-    padding: 15px;
-    text-align: justify;
     color: white;
+    text-align: center;
+    padding: 15px;
+    background-image: linear-gradient(120deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
+    border-radius: 10px;
+    font-family: TT Fors;
 }
 
-.offer {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 80%;
-    padding-bottom: 10%;
-    outline: 1px solid grey;
-    border-radius: 5px;
-    box-shadow:rgba(0,0,0,0.5) 0px 0px 5px;
-    background: rgba(0, 0, 0, 0.7);
+.text p {
+    font-family: TT Fors;
+    font-size: 18px;
     padding: 15px;
-    text-align: justify;
-    color: white;
 }
 
-.offer h3, .offer h4 {
+.text h3, .text h4 {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Bicubik;
 }
 
 .name-section, .password-section, .surname-section {
