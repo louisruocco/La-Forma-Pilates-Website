@@ -21,7 +21,6 @@ body {
     background-image: url("/images/background.jpg");
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
 }
 
 img {
@@ -48,8 +47,8 @@ li {
     height: 100vh;
     background: black;
     position: fixed;
-    opacity: .7;
     z-index: -1;
+    opacity: 0;
 }
 
 .admin-title {
@@ -82,6 +81,7 @@ li {
     top: 0;
     text-align: center;
     font-family: Bicubik;
+    opacity: 0;
 }
 
 .nav ul {
@@ -102,7 +102,7 @@ li {
 .nav a {
     text-decoration: none;
     transition: .2s ease;
-    color: purple;
+    color: rgb(0, 143, 143);
 }
 
 .nav a:hover {
@@ -110,7 +110,11 @@ li {
     transition: .2s ease;
 }
 
-.about h2, .what-we-offer h2, .contact h2 {
+.about {
+    padding-top: 100vh;
+}
+
+.what-we-offer h2, .contact h2 {
     margin-top: 15%;
 }
 
@@ -127,7 +131,7 @@ li {
 
 .text p {
     font-family: TT Fors;
-    font-size: 18px;
+    font-size: 20px;
     padding: 15px;
 }
 
