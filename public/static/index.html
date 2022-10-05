@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/styles.css">
     <title>La Forma Pilates</title>
 </head>
@@ -14,15 +15,15 @@
         <nav>
             <ul>
                 <li><a href="#home">
-                    <p class = "nav-text">About</p>
+                    <p class = "nav-text">Welcome</p>
                 </a></li>
                 <li><a href="#services">
-                    <p class = "nav-text">What We Offer</p>
+                    <p class = "nav-text">Sessions</p>
                 </a></li>
                 <li><a href="#contact">
                     <p class = "nav-text">Contact</p>
                 </a></li>
-                <li><a href="">
+                <li><a href="/admin">
                     <i class="fa-solid fa-right-to-bracket"></i>
                 </a></li>
             </ul>
@@ -31,16 +32,17 @@
     <div class="about">
         <div class="anchor" id="home"></div>
         <div class="title1">
-            <h2>Welcome:</h2>
+            <h2>Welcome</h2>
         </div>
         <div class="text">
             <h3 class = "about-title">La Forma Pilates</h3>
-            <h4 class = "breakdown">Reformer | Pre & Post Natal | Injury Rehab | Matwork</h4>
+            <h4 class = "subtitle">Reformer | Pre & Post Natal | Injury Rehab | Matwork</h4>
             <p> 
-                Ciao, my name is Rachel Muldoon, it’s lovely to meet you.
-                My life has always been based on movement and I’m excited about sharing my passion with you. A professional dancer in theatre, TV and film, I have trained my whole life with Pilates intertwined from the age of ten. After suffering an injury in 2009 I used my time off to turn my constant support of Pilates into a career and studied with Body Control Pilates. 
-                Since then I have shared my knowledge and experience for classes, injury rehab and performance enhancement. 
-                Every ‘body’ is different and together we can explore movement that suits you to enhance and enjoy your training.
+                Offering a 1:1 experience with your body and wellness in mind.
+                <br>
+                Movement matters - with Rachel you will improve your centre and alignment empowering your all over well being, strength, flexibility and day to day life. 
+                <br>
+                Let’s meet on the mat. 
             </p>
             <div class="img">
                 <img src="/images/img1.jpg" alt="">
@@ -50,13 +52,13 @@
     <div class="what-we-offer">
         <div class="anchor" id="services"></div>
         <div class="title1">
-            <h2>What We Offer:</h2>
+            <h2>Sessions</h2>
         </div>
         <div class="text">
             <p>
                 <h3>La Forza</h3>
                 <br>
-                <h4>Strength and Conditioning</h4> 
+                <h4 class = "subtitle">Strength and Conditioning</h4> 
                 <br>
                 Find your deeper strength on the Reformer - a Pilates machine designed to challenge and stabilise creating a diverse session to enhance your mobility and capability. 
                 All bodies welcome.
@@ -66,7 +68,7 @@
             <p>
                 <h3>La Mamma</h3>
                 <br>
-                <h4>Pre and Post Natal</h4>
+                <h4 class = "subtitle">Pre and Post Natal</h4>
                 <br>
                 All about you - care, strengthen, stretch and empower. Offering support to you (and your pelvic floor!) through your individual journey of pregnancy and beyond. Combining matwork, reformer, breathing techniques and props to assist, release and condition your body at this precious time. 
             </p>
@@ -75,7 +77,7 @@
             <p>
                 <h3>La Cura</h3>
                 <br>
-                <h4>Injury Rehab</h4>
+                <h4 class = "subtitle">Injury Rehab</h4>
                 <br>
                 Recover and rehabilitate - a step by step process to get you moving again.
                 Regain strength, relearn skills or find a new understanding to rebuild your body. 
@@ -86,7 +88,7 @@
             <p>
                 <h3>La Terra</h3>
                 <br>
-                <h4>Matwork</h4>
+                <h4 class = "subtitle">Matwork</h4>
                 <br>
                 Functional bodyweight and prop based. 
                 Enhance your deepest core and refine your posture and strength. Learn techniques to improve your breathe, alignment, centre and flexibility allowing you to practise anytime and anywhere. Free your movement and mind. 
@@ -96,7 +98,27 @@
     <div class="contact">
         <div class="anchor" id="contact"></div>
         <div class="title1">
-            <h2>Contact:</h2>
+            <h2>Contact</h2>
+        </div>
+        <div class="text">
+            <form action="">
+                <div class="client-name-section">
+                    <input type="text" name = "name" required placeholder="First Name">
+                </div>
+                <div class="client-surname-section">
+                    <input type="text" name = "surname" required placeholder="Surname">
+                </div>
+                <div class="email-section">
+                    <input type="text" name = "email" required placeholder="Email Address">
+                </div>
+                <div class="number-section">
+                    <input type="text" name = "number" required placeholder="Phone Number">
+                </div>
+                <div class="enquiry-section">
+                    <textarea name="enquiry" id="" cols="60" rows="15" placeholder="What is your enquiry?"></textarea>
+                </div>
+                <button>Submit</button>
+            </form>
         </div>
     </div>
     <script src = "/js/app.js"></script>
