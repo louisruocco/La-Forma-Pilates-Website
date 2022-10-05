@@ -19,7 +19,7 @@ invoiceItem.forEach(item => {
 
 window.addEventListener("scroll", () => {
     const topPosition = about.getBoundingClientRect().top;
-    const windowPosition = window.innerHeight / 15;
+    const windowPosition = window.innerHeight / 16;
     console.log(windowPosition);
     console.log(topPosition);
     if(topPosition < windowPosition){
