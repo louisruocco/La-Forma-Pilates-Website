@@ -338,4 +338,14 @@ li {
     justify-content: center;
     padding: 10px;
     border-radius: 5px;
+    font-family: TT fors;
+    transition: .2s ease;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.contact button:hover {
+    background: seagreen;
+    color: white;
+    transition: .2s ease;
 }
