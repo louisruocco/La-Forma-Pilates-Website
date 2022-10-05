@@ -2,7 +2,7 @@ const title = document.querySelector(".title");
 const invoiceItem = document.querySelectorAll(".invoice");
 const nav = document.querySelector(".nav");
 const overlay = document.querySelector(".overlay");
-const about = document.querySelector(".about");
+const welcome = document.querySelector(".welcome");
 
 window.addEventListener("load", () => {
     title.classList.add("title-appear");
@@ -18,8 +18,8 @@ invoiceItem.forEach(item => {
 });
 
 window.addEventListener("scroll", () => {
-    const topPosition = about.getBoundingClientRect().top;
-    const windowPosition = window.innerHeight / 16;
+    const topPosition = welcome.getBoundingClientRect().top;
+    const windowPosition = window.innerHeight / 25;
     console.log(windowPosition);
     console.log(topPosition);
     if(topPosition < windowPosition){

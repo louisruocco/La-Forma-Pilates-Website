@@ -25,7 +25,6 @@ body {
 }
 
 img {
-    width: 50%;
     padding: 20px;
     border-radius: 25px;
 }
@@ -34,7 +33,23 @@ li {
     list-style: none;
 }
 
-#home {
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+::-webkit-scrollbar-track {
+    background: rgb(0, 143, 143);
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 49);
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(44, 0, 44);
+}
+
+#welcome {
     padding-top: 50px;
 }
 
@@ -80,6 +95,38 @@ li {
     font-family: Bicubik;
 }
 
+.subtitle {
+    color: rgb(214, 95, 95);
+    text-align: center;
+    padding: 10px;
+}
+
+.text {
+    width: 70%;
+    margin: auto;
+    color: white;
+    text-align: justify;
+    padding: 15px;
+    background-image: linear-gradient(100deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
+    border-radius: 10px;
+    font-family: TT Fors;
+    font-size: 20px;
+}
+
+.text p {
+    font-family: TT Fors;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.text h3, .text h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Bicubik;
+}
+
 .nav {
     background-image: linear-gradient(120deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
     position: sticky;
@@ -115,30 +162,26 @@ li {
     transition: .2s ease;
 }
 
-.about {
+.welcome {
     padding-top: 100vh;
 }
 
-.what-we-offer h2, .contact h2 {
-    margin-top: 15%;
+.about, .sessions, .contact {
+    padding-top: 10vh;
 }
 
-.about-title {
+.welcome-title {
     font-family: Bicubik;
     text-align: center;
     font-size: 25px;
     padding: 20px;
 }
 
-.subtitle {
-    color: rgb(214, 95, 95);
-}
-
-.text {
+.welcome-text {
     width: 70%;
     margin: auto;
     color: white;
-    text-align: justify;
+    text-align: center;
     padding: 15px;
     background-image: linear-gradient(100deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
     border-radius: 10px;
@@ -146,22 +189,89 @@ li {
     font-size: 20px;
 }
 
-.text p {
-    font-family: TT Fors;
-    font-size: 20px;
-    padding: 15px;
-    text-align: center;
+.welcome-text img {
+    width: 40%;
 }
 
-.text h3, .text h4 {
+.about-text {
+    display: flex;
+    width: 70%;
+    background-image: linear-gradient(100deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    font-family: TT Fors;
+    font-size: 22px;
+    color: white;
+    text-align: justify;
+}
+
+.about-text img {
+    max-width: 20%;
+    border-radius: 40px;
+}
+
+.pregnancy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    width: 90%;
+    margin: auto;
+}
+
+.reformer h3 {
+    margin-top: 20px;
+}
+
+.reformer img, .matwork img {
+    width: 40%;
+}
+
+.reformer, .rehab, .matwork {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Bicubik;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    margin: auto;
+    padding: 30px;
 }
 
-.img {
-    text-align: center;
+.rehab img {
+    width: 30%;
+}
+
+.pregnancy-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pregnancy2 {
+    width: 30%;
+}
+
+.pregnancy1 {
+    width: 40%;
+}
+
+.mailto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-decoration: none;
+    color: rgb(0, 143, 143);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    background: rgb(0, 0, 49);
+    width: 20%;
 }
 
 .name-section, .password-section, .surname-section {
