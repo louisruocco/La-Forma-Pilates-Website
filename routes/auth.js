@@ -5,6 +5,7 @@ const clients = require("../db/clients");
 const bcrypt = require("bcrypt");
 const dotenv = require("dotenv");
 const invoices = require("../db/invoice");
+const nodemailer = require("nodemailer");
 const router = express.Router();
 
 dotenv.config({path: "./.env"});
@@ -91,6 +92,7 @@ router.post("/admin/client/:name/:surname/add-invoice", redirectLogin, async (re
     });
 
     res.redirect(`/admin/client/${req.params.name}/${req.params.surname}`);
+
     //add flash messaged for add invoice
 });
 
@@ -135,15 +137,12 @@ router.post("/:name/:surname/:id/delete-client", redirectLogin, async (req, res)
 
 router.post("/auth/contact", async (req, res) => {
     const { name, surname, email, number, enquiry } = req.body;
-    await contact.create({
+    await clients.create({
         name: name, 
         surname: surname, 
-        email: email, 
-        number: number, 
-        enquiry: enquiry
     });
 
-
+    
 })
 
 module.exports = router;
