@@ -34,11 +34,11 @@ li {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
   }
   
 ::-webkit-scrollbar-track {
-    background: rgb(0, 143, 143);
+    background: rgb(0, 83, 83);
 }
   
 ::-webkit-scrollbar-thumb {
@@ -246,18 +246,8 @@ li {
     width: 30%;
 }
 
-.pregnancy-images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.pregnancy2 {
+.pregnancy img {
     width: 30%;
-}
-
-.pregnancy1 {
-    width: 40%;
 }
 
 .mailto {
@@ -411,6 +401,7 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 60px;
 }
 
 .contact div {
@@ -420,7 +411,7 @@ li {
 .contact input {
     padding: 10px;
     border-radius: 5px;
-    width: 70%;
+    width: 40%;
     margin: auto;
     font-size: 18px;
     display: flex;

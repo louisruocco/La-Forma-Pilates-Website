@@ -131,6 +131,10 @@ router.post("/:name/:surname/:id/delete-client", redirectLogin, async (req, res)
     await clients.deleteOne({_id: req.params.id})
     await invoices.remove({name: req.params.name, surname: req.params.surname})
     res.redirect("/admin/dashboard");
+});
+
+router.post("/auth/contact", (req, res) => {
+    const { name, surname, email, number, enquiry } = req.body;
 })
 
 module.exports = router;

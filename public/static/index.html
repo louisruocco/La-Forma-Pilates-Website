@@ -97,10 +97,7 @@
                         All about you - care, strengthen, stretch and empower. Offering support to you (and your pelvic floor!) through your individual journey of pregnancy and beyond. Combining matwork, reformer, breathing techniques and props to assist, release and condition your body at this precious time. 
                     </p>
                 </div>
-                <div class="pregnancy-images">
-                    <img class = "pregnancy1" src="/images/pregnancy1.jpg" alt="">
-                    <img class = "pregnancy2" src="/images/pregnancy2.jpg" alt="">
-                </div>
+                <img src="/images/pregnancy2.jpg" alt="">
                 <a class = "mailto" href="mailto:info@laformapilates.co.uk">Get in Touch</a>
             </div>
             <br>
@@ -144,7 +141,7 @@
             <h2>Contact</h2>
         </div>
         <div class="text">
-            <form action="">
+            <form action="/auth/contact" method = "POST">
                 <div class="client-name-section">
                     <input type="text" name = "name" required placeholder="First Name">
                 </div>
@@ -155,10 +152,10 @@
                     <input type="text" name = "email" required placeholder="Email Address">
                 </div>
                 <div class="number-section">
-                    <input type="text" name = "number" required placeholder="Phone Number">
+                    <input type="text" name = "number" placeholder="Phone Number">
                 </div>
                 <div class="enquiry-section">
-                    <textarea name="enquiry" id="" cols="60" rows="15" placeholder="What is your enquiry?"></textarea>
+                    <textarea name="enquiry" id="" cols="60" rows="15" placeholder="What is your enquiry?" required></textarea>
                 </div>
                 <button>Submit</button>
             </form>
