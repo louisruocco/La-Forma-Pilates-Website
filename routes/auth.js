@@ -133,8 +133,17 @@ router.post("/:name/:surname/:id/delete-client", redirectLogin, async (req, res)
     res.redirect("/admin/dashboard");
 });
 
-router.post("/auth/contact", (req, res) => {
+router.post("/auth/contact", async (req, res) => {
     const { name, surname, email, number, enquiry } = req.body;
+    await contact.create({
+        name: name, 
+        surname: surname, 
+        email: email, 
+        number: number, 
+        enquiry: enquiry
+    });
+
+
 })
 
 module.exports = router;
