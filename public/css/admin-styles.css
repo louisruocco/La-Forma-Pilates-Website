@@ -101,7 +101,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 10%;
+    width: 15%;
     margin: auto;
 }
 
@@ -199,4 +199,19 @@
 .choice a:hover, .choice button:hover {
     transition: .3s ease;
     transform: scale(1.05);
+}
+
+.logout {
+    outline: none;
+    border: none;
+    background: none;
+    color: red;
+    font-size: 20px;
+    transition: .3s ease;
+}
+
+.logout:hover {
+    transition: .3s ease;
+    color: white;
+    cursor: pointer;
 }
