@@ -20,8 +20,6 @@ invoiceItem.forEach(item => {
 window.addEventListener("scroll", () => {
     const topPosition = welcome.getBoundingClientRect().top;
     const windowPosition = window.innerHeight / 25;
-    console.log(windowPosition);
-    console.log(topPosition);
     if(topPosition < windowPosition){
         nav.style.opacity = 1;
         nav.style.transition = ".3s ease";
