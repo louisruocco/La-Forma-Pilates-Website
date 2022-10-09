@@ -6,8 +6,6 @@ const bcrypt = require("bcrypt");
 const dotenv = require("dotenv");
 const invoices = require("../db/invoice");
 const nodemailer = require("nodemailer");
-const clients = require("../db/clients");
-const clients = require("../db/clients");
 const router = express.Router();
 
 dotenv.config({path: "./.env"});
