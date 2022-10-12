@@ -30,7 +30,7 @@ img {
 }
 
 p {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 li {
@@ -198,6 +198,10 @@ li {
     margin: auto;
 }
 
+.pregnancy p {
+    font-size: 22px;
+}
+
 .reformer h3 {
     margin-top: 20px;
 }
@@ -336,10 +340,15 @@ li {
     }
 
     body {
+        background-size: none;
         background-position: bottom;
     }
 
     p {
+        font-size: 15px;
+    }
+
+    .pregnancy p {
         font-size: 13px;
     }
     
@@ -350,6 +359,7 @@ li {
 
     .nav {
         opacity: 1;
+        position: fixed;
     }
 
     .sessions {
