@@ -119,6 +119,7 @@ nav {
 
 .logo {
     display: none;
+    padding: 10px;
 }
 
 .nav-links {
@@ -147,7 +148,7 @@ nav {
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: rgb(1, 117, 117);
     margin: 5px;
 }
 
@@ -365,6 +366,11 @@ nav {
         opacity: .5;
     }
 
+    .logo {
+        display: block;
+        color: rgb(1, 117, 117);
+    }
+
     .nav-links {
         position: absolute;
         right: 0px;
@@ -415,6 +421,10 @@ nav {
         justify-content: center;
         align-items: center;
         padding: 10px;
+    }
+
+    .contact input, .contact textarea {
+        width: 80%;
     }
 }
 
