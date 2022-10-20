@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    background-image: url("/images/background.jpg");
+    background-image: url("background.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
@@ -350,7 +350,10 @@ nav {
 @media screen and (max-width: 768px){     
     body {
         overflow-x: hidden;
-        background-image: url("/images/phone-background.jpg");
+        background-image: url("phone-background.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
     }
     
     p {
@@ -375,7 +378,7 @@ nav {
         position: absolute;
         right: 0px;
         height: 95vh;
-        top: 7vh;
+        top: 6.5vh;
         background-image: linear-gradient(0deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
         display: flex;
         flex-direction: column;

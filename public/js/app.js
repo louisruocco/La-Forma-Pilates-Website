@@ -30,6 +30,7 @@ window.addEventListener("scroll", () => {
         nav.style.transition = ".3s ease";
         overlay.style.opacity = 0;
         overlay.style.transition = ".5s ease";
+        navLinks.classList.remove("nav-active");
     }
 })
 
