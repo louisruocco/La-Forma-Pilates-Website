@@ -3,10 +3,8 @@ const invoiceItem = document.querySelectorAll(".invoice");
 const nav = document.querySelector(".nav");
 const overlay = document.querySelector(".overlay");
 const welcome = document.querySelector(".welcome");
-
-window.addEventListener("load", () => {
-    title.classList.add("title-appear");
-});
+const burger = document.querySelector(".burger");
+const navLinks = document.querySelector(".nav-links");
 
 invoiceItem.forEach(item => {
     if(item.children[1].textContent === "pending"){
@@ -18,7 +16,7 @@ invoiceItem.forEach(item => {
 });
 
 window.addEventListener("scroll", () => {
-    const topPosition = welcome.getBoundingClientRect().top;
+    const topPosition = welcome.getBoundingClientRect().bottom / 30;
     const windowPosition = window.innerHeight / 25;
     if(topPosition < windowPosition){
         nav.style.opacity = 1;
@@ -35,3 +33,6 @@ window.addEventListener("scroll", () => {
     }
 })
 
+burger.addEventListener("click", () => {
+    navLinks.classList.toggle("nav-active");
+})
