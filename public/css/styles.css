@@ -375,7 +375,7 @@ nav {
         position: absolute;
         right: 0px;
         height: 95vh;
-        top: 5vh;
+        top: 7vh;
         background-image: linear-gradient(0deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
         display: flex;
         flex-direction: column;
