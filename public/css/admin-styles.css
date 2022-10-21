@@ -212,3 +212,61 @@
     color: white;
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px){
+    body {
+        overflow-x: hidden;
+    }
+
+    .admin-title {
+        font-size: 13px;
+        height: 50vh;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    .nav li {
+        font-size: 16px;
+    }
+
+    .clients li, .invoices li {
+        font-size: 16px;
+        display: block;
+        text-align: center;
+    }
+
+    .icons, .invoice form {
+        margin: 10px;
+    }
+
+    .icons a {
+        font-size: 16px;
+        margin: 10px;
+    }
+
+    .input-section {
+        display: flex;
+        font-size: 14px;
+    }
+
+    .input-section div {
+        width: 300px;
+        display: block;
+        left: 0px;
+    }
+
+    .input-section button {
+        width: 100px;
+    }
+
+    .choice {
+        display: block;
+        padding: 10px;
+    }
+
+    .choice a {
+        margin-top: 100px
+    }
+}
