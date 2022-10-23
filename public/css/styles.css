@@ -11,6 +11,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -108,7 +109,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
+    min-height: 5vh;
     background-image: linear-gradient(120deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
     font-family: Bicubik;
     position: fixed;
@@ -124,7 +125,7 @@ nav {
 
 .nav-links {
     display: flex;
-    width: 60%;
+    width: 80%;
     justify-content: space-around;
 }
 
@@ -138,6 +139,12 @@ nav {
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 18px;
+    transition: .2s ease;
+}
+
+.nav-links a:hover {
+    color: white;
+    transition: .2s ease;
 }
 
 .burger {
@@ -252,7 +259,7 @@ nav {
     border-radius: 5px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
     background: rgb(0, 0, 49);
-    width: 100px;
+    width: 150px;
 }
 
 .name-section, .password-section, .surname-section {
@@ -347,13 +354,84 @@ nav {
     transition: .2s ease;
 }
 
+@media screen and (max-width: 1024px){
+    body {
+        overflow-x: hidden;
+        background-image: url("/images/phone-background.jpg");
+        background-size: cover;
+    }
+    
+    .logo {
+        display: block;
+        color: rgb(1, 117, 117);
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 95vh;
+        top: 5vh;
+        background-image: linear-gradient(0deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: .5s ease;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .contact input, .contact textarea {
+        width: 80%;
+    }
+
+    .about-text img {
+        width: 200px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reformer, .rehab, .matwork, .pregnancy {
+        text-align: center;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        display: block;
+    }
+
+    .welcome-text img {
+        width: 100%;
+    }
+
+    .sessions img {
+        width: 65%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .contact input, .contact textarea {
+        width: 80%;
+    }
+
+    .mailto {
+        width: 100px;
+    }
+
+}
+
 @media screen and (max-width: 768px){     
     body {
         overflow-x: hidden;
         background-image: url("/images/phone-background.jpg");
         background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
     }
     
     p {
@@ -378,7 +456,7 @@ nav {
         position: absolute;
         right: 0px;
         height: 95vh;
-        top: 8vh;
+        top: 5vh;
         background-image: linear-gradient(0deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
         display: flex;
         flex-direction: column;
@@ -411,14 +489,18 @@ nav {
 
     .reformer, .rehab, .matwork, .pregnancy {
         text-align: center;
-        width: 80%;
+        width: 90%;
         justify-content: center;
         align-items: center;
         display: block;
     }
 
+    .welcome-text img {
+        width: 100%;
+    }
+
     .sessions img {
-        width: 200px;
+        width: 100%;
         margin: auto;
         display: flex;
         justify-content: center;
@@ -428,6 +510,10 @@ nav {
 
     .contact input, .contact textarea {
         width: 80%;
+    }
+
+    .mailto {
+        width: 100px;
     }
 }
 
