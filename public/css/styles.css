@@ -429,6 +429,10 @@ nav {
     .contact input, .contact textarea {
         width: 80%;
     }
+
+    .choice {
+        display: flex;
+    }
 }
 
 .nav-active {

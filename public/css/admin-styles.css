@@ -165,11 +165,9 @@
 
 .choice {
     display: flex;
-    width: 30%;
     height: 40vh;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin: auto;
 }
 
 .choice button {
@@ -181,6 +179,7 @@
     background: red;
     transition: .3s ease;
     cursor: pointer;
+    margin: 20px;
 }
 
 .choice a {
@@ -191,6 +190,7 @@
     text-decoration: none;
     color: black;
     transition: .3s ease;
+    margin: 20px;
 }
 
 .choice a:hover, .choice button:hover {
@@ -220,7 +220,7 @@
 
     .admin-title {
         font-size: 13px;
-        height: 50vh;
+        height: 30vh;
     }
 
     .nav {
@@ -259,14 +259,5 @@
 
     .input-section button {
         width: 100px;
-    }
-
-    .choice {
-        display: block;
-        padding: 10px;
-    }
-
-    .choice a {
-        margin-top: 100px
     }
 }
