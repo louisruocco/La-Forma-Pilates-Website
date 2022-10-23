@@ -20,6 +20,11 @@
     <div class="admin-title">
         <h1>Admin Area</h1>
     </div>
+    <% if(message.length > 0){ %>
+        <ul class = "error">
+            <li><%= message %></li>
+        </ul>
+    <% } %>
     <div class="input-section">
         <form action="/auth/login" method = "POST">
             <div class="name-section">

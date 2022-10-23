@@ -22,7 +22,7 @@ router.get("/", (req, res) => {
 
 router.get("/admin", (req, res) => {
     const { userId } = req.session;
-    res.sendFile(path.join(__dirname, "../public/static/admin.html"))
+    res.render("admin", {message: req.flash("error")});
 });
 
 router.get("/admin/dashboard", redirectLogin, async (req, res) => {
@@ -41,7 +41,7 @@ router.get("/admin/client/:name/:surname", redirectLogin, async (req, res) => {
 });
 
 router.get("/admin/client/:name/:surname/edit-client", redirectLogin, async (req, res) => {
-    const client = await clients.find({name: req.params.name, surname: req.params.surname});
+    const client = await clients.find({name: req.params.name, surname: req.parpams.surname});
     res.render("edit-client", {client});
 })
 

@@ -31,13 +31,15 @@ router.post("/login", redirectHome, async (req, res) => {
     const user = await users.find({name: username});
 
     if(user[0] === undefined){
-        return res.send("User Not Found");
+        req.flash("error", "User Not Found");
+        return res.redirect("back");
     }
 
     const bcryptCompare = await bcrypt.compare(password, user[0].password);
 
     if(!user || !bcryptCompare){
-        return res.send("User Not found");
+        req.flash("error", "User Not Found");
+        return res.redirect("back");
     } else {
         req.session.userId = user[0].id;
         res.redirect("/admin/dashboard");
