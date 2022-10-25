@@ -431,9 +431,9 @@ nav {
     body {
         overflow-x: hidden;
         background-image: url("/images/phone-background.jpg");
-        background-size: 100vw auto;
+        background-size: 100vh;
         background-attachment: fixed;
-        background-position: center;
+        background-repeat: no-repeat;
     }
     
     p {
