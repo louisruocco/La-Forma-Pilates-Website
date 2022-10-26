@@ -430,6 +430,7 @@ nav {
         overflow-x: hidden;
         background-position: center center;
         background-attachment: fixed;
+        background-size: cover;
         background-image: url("/images/phone-background.jpg");
     }
     
