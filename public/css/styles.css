@@ -435,6 +435,8 @@ nav {
         -moz-background-size: calc(100vw) calc(100vh);
         -o-background-size: calc(100vw) calc(100vh);
         background-size: calc(100vw) calc(100vh);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
     }
     
     p {
