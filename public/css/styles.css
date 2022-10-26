@@ -429,6 +429,9 @@ nav {
     body {
         overflow-x: hidden;
         background-position: center center;
+        background-attachment: fixed;
+        background-size: 100vh;
+        background-image: url("/images/phone-background.jpg")
     }
     
     p {
