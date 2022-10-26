@@ -431,7 +431,9 @@ nav {
         background-position: center center;
         background-attachment: fixed;
         background-size: 100vh;
-        background-image: url("/images/phone-background.jpg")
+        background-image: url("/images/phone-background.jpg");
+        width: 100vw;
+        height: 100vh;
     }
     
     p {
