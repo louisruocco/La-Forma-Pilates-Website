@@ -433,7 +433,6 @@ nav {
         background-image: url("/images/phone-background.jpg");
         background-size: cover;
         background-attachment: fixed;
-        background-repeat: no-repeat;
     }
     
     p {
