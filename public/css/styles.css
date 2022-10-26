@@ -428,12 +428,7 @@ nav {
 @media screen and (max-width: 768px){     
     body {
         overflow-x: hidden;
-        background-image: url("/images/phone-background.jpg");
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        background-attachment: fixed;
+        background-position: center center;
     }
     
     p {
