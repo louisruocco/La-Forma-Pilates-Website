@@ -431,10 +431,10 @@ nav {
     body {
         overflow-x: hidden;
         background-image: url("/images/phone-background.jpg");
-        -webkit-background-size: calc(100vw) calc(100vh);
-        -moz-background-size: calc(100vw) calc(100vh);
-        -o-background-size: calc(100vw) calc(100vh);
-        background-size: calc(100vw) calc(100vh);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
     }
@@ -461,7 +461,7 @@ nav {
         position: absolute;
         right: 0px;
         height: 95vh;
-        top: 7.5vh;
+        top: 7vh;
         background-image: linear-gradient(0deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
         display: flex;
         flex-direction: column;
