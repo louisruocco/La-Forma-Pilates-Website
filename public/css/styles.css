@@ -359,6 +359,7 @@ nav {
         background-image: url("/images/phone-background.jpg");
         background-attachment: fixed;
         background-position: center;
+        background-size: cover;
     }
     
     .logo {
