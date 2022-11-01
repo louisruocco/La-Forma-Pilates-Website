@@ -395,7 +395,7 @@ nav {
     }
 
     .about, .sessions, .contact {
-        background-image: linear-gradient(100deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
+        background-image: linear-gradient(300deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
     }
 
     .reformer, .rehab, .matwork, .pregnancy {
