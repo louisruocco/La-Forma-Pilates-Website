@@ -358,7 +358,7 @@ nav {
     body {
         overflow-x: hidden;
         background: url("/images/phone-background.jpg");
-        background-attachment: fixed;
+        background-repeat: no-repeat;
     }
     
     .logo {
@@ -431,7 +431,7 @@ nav {
     body {
         overflow-x: hidden;
         background: url("/images/phone-background.jpg");
-        background-attachment: fixed;
+        background-repeat: no-repeat;
     }
     
     p {
