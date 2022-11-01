@@ -22,6 +22,7 @@ body {
     background-image: url("/images/background.jpg");
     background-size: cover;
     background-attachment: fixed;
+    background-position: top;
 }
 
 img {
@@ -158,8 +159,8 @@ nav {
     margin: 5px;
 }
 
-.welcome {
-    margin-top: 100vh;
+.container {
+    padding-top: 100vh;
 }
 
 .about, .sessions, .contact {
@@ -450,11 +451,6 @@ nav {
         font-size: 13px;
     }
     
-    .overlay {
-        height: 100%;
-        opacity: .5;
-    }
-
     .logo {
         display: block;
         color: rgb(1, 117, 117);
