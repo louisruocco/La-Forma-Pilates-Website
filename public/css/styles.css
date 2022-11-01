@@ -432,6 +432,7 @@ nav {
         background-attachment: scroll;
         background-position: top;
         background-size: 900px 900px;
+        background-repeat: no-repeat;
     }
     
     p {
