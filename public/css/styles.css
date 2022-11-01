@@ -504,6 +504,12 @@ nav {
     }
 }
 
+@media (pointer: coarse) {
+    body {
+            background-attachment: fixed !important;
+    }
+}
+
 .nav-active {
     transform: translateY(0%);
     transition: .5s ease;
