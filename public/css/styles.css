@@ -437,7 +437,7 @@ nav {
 @media screen and (max-width: 768px){        
     body {
         background-image: url("/images/phone-background.jpg");
-        background-position: scroll;
+        background-position: top;
         background-size: 900px 900px;
         background-repeat: no-repeat;
     }
