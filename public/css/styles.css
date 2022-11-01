@@ -159,7 +159,7 @@ nav {
 }
 
 .welcome {
-    padding-top: 100vh;
+    margin-top: 100vh;
 }
 
 .about, .sessions, .contact {
@@ -395,11 +395,8 @@ nav {
     }
 
     .welcome {
-        background-image: url("/images/phone-background.jpg");
-        background-position: center;
-        background-size: 900px 900px;
-        background-repeat: no-repeat;
-        
+        background-image: linear-gradient(300deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
+
     }
 
     .about, .sessions, .contact {
