@@ -359,6 +359,7 @@ nav {
         overflow-x: hidden;
         background: url("/images/phone-background.jpg");
         background-repeat: no-repeat;
+        background-size: cover;
     }
     
     .logo {
@@ -432,6 +433,7 @@ nav {
         overflow-x: hidden;
         background: url("/images/phone-background.jpg");
         background-repeat: no-repeat;
+        background-size: cover;
     }
     
     p {
