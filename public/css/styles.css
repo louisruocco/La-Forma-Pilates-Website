@@ -357,10 +357,7 @@ nav {
 @media screen and (max-width: 1024px){
     body {
         overflow-x: hidden;
-        background: url("/images/phone-background.jpg");
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center center;
+        background-image: linear-gradient(-360deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
     }
     
     .logo {
@@ -404,6 +401,7 @@ nav {
         justify-content: center;
         align-items: center;
         display: block;
+        font-size: 15px;
     }
 
     .welcome-text img {
