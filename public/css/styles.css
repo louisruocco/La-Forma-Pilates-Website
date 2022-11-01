@@ -511,9 +511,9 @@ nav {
     }
 }
 
-@media screen and (orientation: landscape){
+@media screen and (max-width: 1024px) and (orientation: landscape){
     body {
-        background-size: 700px 700px;
+        background-size: 600px 600px;
         background-position: center;
     }
 
