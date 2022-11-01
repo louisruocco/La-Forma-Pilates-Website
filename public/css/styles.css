@@ -358,9 +358,10 @@ nav {
     body {
         overflow-x: hidden;
         background: url("/images/phone-background.jpg");
-        background-size: 100vw;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        width: 100vw;
+        height: 100vh;
     }
     
     .logo {
