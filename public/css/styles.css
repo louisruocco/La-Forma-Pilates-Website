@@ -357,7 +357,7 @@ nav {
 @media screen and (max-width: 1024px){
     body {
         overflow-x: hidden;
-        background-size: cover;
+        background-size: 100vw;
         background-attachment: fixed;
         background-position: center center;
     }
