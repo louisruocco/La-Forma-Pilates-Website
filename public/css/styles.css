@@ -359,6 +359,7 @@ nav {
         overflow-x: hidden;
         background-attachment: fixed;
         background: url("/images/phone-background.jpg");
+        background-size: cover;
     }
     
     .logo {
@@ -430,10 +431,9 @@ nav {
 @media screen and (max-width: 768px){     
     body {
         overflow-x: hidden;
-        background-position: top;
         background-attachment: fixed;
+        background: url("/images/phone-background.jpg");
         background-size: cover;
-        background-image: url("/images/phone-background.jpg");
     }
     
     p {
