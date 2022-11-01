@@ -215,6 +215,7 @@ nav {
     padding: 30px;
     width: 90%;
     margin: auto;
+    font-size: 21px;
 }
 
 .pregnancy p {
@@ -356,7 +357,8 @@ nav {
 @media screen and (max-width: 1024px){
     body {
         overflow-x: hidden;
-        background-position: center center;
+        background-attachment: fixed;
+        background: url("/images/phone-background.jpg");
     }
     
     .logo {
