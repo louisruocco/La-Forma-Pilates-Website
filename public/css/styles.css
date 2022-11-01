@@ -429,9 +429,9 @@ nav {
 @media screen and (max-width: 768px){        
     body {
         background-image: url("/images/phone-background.jpg");
-        background-attachment: fixed !important;
-        background-position: center center;
-        background-size: cover;
+        background-attachment: fixed;
+        background-position: top;
+        background-size: 900px 900px;
     }
     
     p {
