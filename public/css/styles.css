@@ -368,7 +368,7 @@ nav {
         position: absolute;
         right: 0px;
         height: 95vh;
-        top: 7vh;
+        top: 6.75vh;
         background-image: linear-gradient(0deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
         display: flex;
         flex-direction: column;
@@ -431,6 +431,8 @@ nav {
         background-image: url("/images/phone-background.jpg");
         background-attachment: fixed;
         background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
     
     p {
@@ -449,20 +451,6 @@ nav {
     .logo {
         display: block;
         color: rgb(1, 117, 117);
-    }
-
-    .nav-links {
-        position: absolute;
-        right: 0px;
-        height: 95vh;
-        top: 5vh;
-        background-image: linear-gradient(0deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: .5s ease;
     }
 
     .burger {
