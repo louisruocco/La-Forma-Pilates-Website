@@ -357,6 +357,9 @@ nav {
 @media screen and (max-width: 1024px){
     body {
         overflow-x: hidden;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
     }
     
     .logo {
@@ -425,11 +428,7 @@ nav {
 
 }
 
-@media screen and (max-width: 768px){     
-    body {
-        overflow-x: hidden;
-    }
-    
+@media screen and (max-width: 768px){        
     p {
         font-size: 15px;
     }
