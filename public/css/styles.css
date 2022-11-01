@@ -303,7 +303,6 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 60px;
 }
 
 .contact div {
@@ -438,7 +437,7 @@ nav {
 @media screen and (max-width: 768px){        
     body {
         background-image: url("/images/phone-background.jpg");
-        background-position: top;
+        background-position: center;
         background-size: 900px 900px;
         background-repeat: no-repeat;
     }
@@ -509,6 +508,17 @@ nav {
 
     .mailto {
         width: 100px;
+    }
+}
+
+@media screen and (orientation: landscape){
+    body {
+        background-size: 700px 700px;
+        background-position: center;
+    }
+
+    .nav-links {
+        top: 12vh;
     }
 }
 
