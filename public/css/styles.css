@@ -368,7 +368,7 @@ nav {
         position: absolute;
         right: 0px;
         height: 95vh;
-        top: 6.75vh;
+        top: 6.5vh;
         background-image: linear-gradient(0deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
         display: flex;
         flex-direction: column;
@@ -429,9 +429,9 @@ nav {
 @media screen and (max-width: 768px){        
     body {
         background-image: url("/images/phone-background.jpg");
-        background-attachment: fixed;
+        background-attachment: fixed !important;
         background-position: center center;
-        background-size: 120vh 120vw;
+        background-size: cover;
     }
     
     p {
