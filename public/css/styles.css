@@ -394,6 +394,10 @@ nav {
         align-items: center;
     }
 
+    .welcome, .about, .sessions, .contact {
+        background-image: linear-gradient(100deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
+    }
+
     .reformer, .rehab, .matwork, .pregnancy {
         text-align: center;
         width: 90%;
@@ -429,7 +433,6 @@ nav {
 @media screen and (max-width: 768px){        
     body {
         background-image: url("/images/phone-background.jpg");
-        background-attachment: scroll;
         background-position: top;
         background-size: 900px 900px;
         background-repeat: no-repeat;
@@ -501,12 +504,6 @@ nav {
 
     .mailto {
         width: 100px;
-    }
-}
-
-@media (pointer: coarse) {
-    body {
-            background-attachment: fixed !important;
     }
 }
 
