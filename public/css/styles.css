@@ -357,11 +357,6 @@ nav {
 @media screen and (max-width: 1024px){
     body {
         overflow-x: hidden;
-        background: url("/images/phone-background.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        width: 100vw;
-        height: 100vh;
     }
     
     .logo {
@@ -433,10 +428,6 @@ nav {
 @media screen and (max-width: 768px){     
     body {
         overflow-x: hidden;
-        background: url("/images/phone-background.jpg");
-        background-size: 100vw;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
     }
     
     p {
