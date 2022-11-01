@@ -359,7 +359,7 @@ nav {
         overflow-x: hidden;
         background-image: url("/images/phone-background.jpg");
         background-attachment: fixed;
-        background-
+        background-position: center center;
     }
     
     .logo {
