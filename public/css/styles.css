@@ -400,6 +400,7 @@ nav {
 
     .about, .sessions, .contact, .welcome {
         background-image: linear-gradient(300deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
+        padding-bottom: 50px;
     }
 
     .reformer, .rehab, .matwork, .pregnancy {
@@ -516,6 +517,10 @@ nav {
         background-size: 1100px 450px;
         background-position: top;
         background-repeat: no-repeat;
+    }
+
+    .about-text {
+        display: block;
     }
 
     .nav-links {
