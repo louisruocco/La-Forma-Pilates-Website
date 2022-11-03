@@ -514,7 +514,8 @@ nav {
     body {
         background-image: url("/images/phone-background.jpg");
         background-size: 1100px 550px;
-        background-position: center;
+        background-position: top;
+        background-repeat: no-repeat;
     }
 
     .nav-links {
