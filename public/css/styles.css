@@ -364,6 +364,10 @@ nav {
         color: rgb(1, 117, 117);
     }
 
+    .overlay {
+        z-index: 1;
+    }
+
     .nav-links {
         position: absolute;
         right: 0px;
@@ -439,7 +443,7 @@ nav {
     body {
         background-image: url("/images/phone-background.jpg");
         background-position: top;
-        background-size: 900px 900px;
+        background-size: 1200px 100%;
         background-repeat: no-repeat;
     }
     
