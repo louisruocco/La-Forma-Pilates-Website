@@ -365,7 +365,7 @@ nav {
     }
 
     .overlay {
-        z-index: 1;
+        background: none;
     }
 
     .nav-links {
