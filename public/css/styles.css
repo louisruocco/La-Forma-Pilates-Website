@@ -438,12 +438,16 @@ nav {
     body {
         background-image: url("/images/phone-background.jpg");
         background-position: top;
-        background-size: 1000px 750px;
+        background-size: 1100px 800px;
         background-repeat: no-repeat;
     }
     
     p {
         font-size: 15px;
+    }
+
+    .container {
+        padding-top: 100vh;
     }
 
     .pregnancy p {
