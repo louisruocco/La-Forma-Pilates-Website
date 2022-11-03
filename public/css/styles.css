@@ -438,7 +438,7 @@ nav {
     body {
         background-image: url("/images/phone-background.jpg");
         background-position: top;
-        background-size: 600px;
+        background-size: 600px 900px;
         background-repeat: no-repeat;
     }
     
