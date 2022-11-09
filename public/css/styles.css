@@ -511,7 +511,7 @@ nav {
     }
 }
 
-@media screen and (max-width: 1024px) and (orientation: landscape){
+@media screen and (max-width: 768px) and (orientation: landscape){
     body {
         background-image: url("/images/phone-background.jpg");
         background-size: 1100px 450px;
