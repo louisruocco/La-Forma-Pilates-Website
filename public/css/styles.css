@@ -523,6 +523,11 @@ nav {
         background: none;
     }
 
+    .logo {
+        display: block;
+        color: rgb(1, 117, 117);
+    }
+
     .nav-links {
         position: absolute;
         right: 0px;
@@ -589,7 +594,7 @@ nav {
     }
 
     .nav-links {
-        top: 11.5vh;
+        top: 6.5vh;
     }
 }
 
