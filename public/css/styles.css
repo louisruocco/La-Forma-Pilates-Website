@@ -354,7 +354,7 @@ nav {
     transition: .2s ease;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 768px){
     body {
         overflow-x: hidden;
     }
@@ -435,11 +435,11 @@ nav {
 
 }
 
-@media screen and (max-width: 768px){        
+@media screen and (max-width: 480px){        
     body {
         background-image: url("/images/phone-background.jpg");
         background-position: top;
-        background-size: 1100px 800px;
+        background-size: 1100px 100vh;
         background-repeat: no-repeat;
     }
     
