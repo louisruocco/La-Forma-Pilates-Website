@@ -511,7 +511,7 @@ nav {
     }
 }
 
-@media screen and (max-width: 1024px) and (orientation: landscape){
+@media screen and (max-width: 480px) and (orientation: landscape){
     body {
         background-image: url("/images/phone-background.jpg");
         background-size: 100vw 450px;
@@ -519,8 +519,71 @@ nav {
         background-repeat: no-repeat;
     }
 
+    p {
+        font-size: 15px;
+    }
+
+    .container {
+        padding-top: 100vh;
+    }
+
+    .pregnancy p {
+        font-size: 13px;
+    }
+    
+    .logo {
+        display: block;
+        color: rgb(1, 117, 117);
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .sessions {
+        width: 100%;
+        margin: auto;
+    }
+
     .about-text {
         display: block;
+    }
+
+    .about-text img {
+        width: 200px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reformer, .rehab, .matwork, .pregnancy {
+        text-align: center;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        display: block;
+    }
+
+    .welcome-text img {
+        width: 100%;
+    }
+
+    .sessions img {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .contact input, .contact textarea {
+        width: 80%;
+    }
+
+    .mailto {
+        width: 100px;
     }
 
     .nav-links {
