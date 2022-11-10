@@ -369,11 +369,16 @@ nav {
         background: none;
     }
 
+
+    nav {
+        padding: 0px;
+    }
+
     .nav-links {
         position: absolute;
         right: 0px;
         height: 95vh;
-        top: 6.3vh;
+        top: 6.5vh;
         background-image: linear-gradient(0deg, rgb(0, 0, 49), rgb(44, 0, 44), rgb(0, 51, 51));
         display: flex;
         flex-direction: column;
@@ -446,6 +451,10 @@ nav {
     
     p {
         font-size: 15px;
+    }
+
+    nav {
+        padding: 0px;
     }
 
     .container {
