@@ -43,7 +43,7 @@ router.post("/login", redirectHome, async (req, res) => {
     }
 
     if(user[0].name === "admin"){
-        res.render("admin-home");
+        return res.render("admin-home");
     } else {
         req.session.userId = user[0].id;
         res.redirect("/admin/dashboard");
@@ -70,7 +70,7 @@ router.post("/add-client", redirectLogin, async (req, res) => {
         return res.send("Client already Exists");
     } else {
         await clients.create({
-            user: user[0].name,
+            user: user[0]._id,
             name: name, 
             surname: surname, 
             address: {
