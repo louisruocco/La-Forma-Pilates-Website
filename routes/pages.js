@@ -26,7 +26,7 @@ router.get("/admin", (req, res) => {
 });
 
 router.get("/admin/dashboard", redirectLogin, async (req, res) => {
-    const findClients = await clients.find({});
+    const findClients = await clients.find({_id: req.session.userId});
     res.render("home", {findClients});
 });
 
@@ -41,7 +41,7 @@ router.get("/admin/client/:name/:surname", redirectLogin, async (req, res) => {
 });
 
 router.get("/admin/client/:name/:surname/edit-client", redirectLogin, async (req, res) => {
-    const client = await clients.find({name: req.params.name, surname: req.parpams.surname});
+    const client = await clients.find({name: req.params.name, surname: req.params.surname});
     res.render("edit-client", {client});
 })
 
@@ -58,6 +58,10 @@ router.get("/admin/client/:name/:surname/:id/edit-invoice", redirectLogin, async
 router.get("/:id/delete-client", redirectLogin, async (req, res) => {
     const client = await clients.find({_id: req.params.id})
     res.render("delete-client", {client});
+})
+
+router.get("/admin/add-user", redirectLogin, (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/static/add-user.html"));
 })
 
 module.exports = router;

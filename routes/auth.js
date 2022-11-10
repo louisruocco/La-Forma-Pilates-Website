@@ -40,6 +40,10 @@ router.post("/login", redirectHome, async (req, res) => {
     if(!user || !bcryptCompare){
         req.flash("error", "User Not Found");
         return res.redirect("back");
+    }
+
+    if(user[0].name === "admin"){
+        res.render("admin-home");
     } else {
         req.session.userId = user[0].id;
         res.redirect("/admin/dashboard");
@@ -59,17 +63,14 @@ router.post("/logout", (req, res) => {
 
 router.post("/add-client", redirectLogin, async (req, res) => {
     const { name, surname, street, postcode } = req.body;
-    const client = await clients.find({
-        $and: [
-            {name: name}, 
-            {surname: surname}
-        ]
-    })
+    const client = await clients.find({name: name, surname: surname})
+    const user = await users.find({_id: req.session.userId});
 
     if(client.length > 0){
         return res.send("Client already Exists");
     } else {
         await clients.create({
+            user: user[0].name,
             name: name, 
             surname: surname, 
             address: {
@@ -78,7 +79,7 @@ router.post("/add-client", redirectLogin, async (req, res) => {
             }
         })
 
-        res.redirect("back");
+        res.redirect("/admin/dashboard");
       }
 });
 
@@ -220,6 +221,23 @@ router.post("/contact", async (req, res) => {
     
         res.redirect("back");
     }
+})
+
+router.post("/admin/add-user", async (req, res) => {
+    const { name, password } = req.body;
+    const user = await users.find({name: name});
+    const hashedPassword = await bcrypt.hash(password, 8)
+    if(user.length > 0){
+        return console.log("user already exists!");
+    } else {
+        await users.create({
+            name: name, 
+            password: hashedPassword
+        });
+    }
+
+    console.log("user added successfully");
+    res.redirect("back");
 })
 
 module.exports = router;

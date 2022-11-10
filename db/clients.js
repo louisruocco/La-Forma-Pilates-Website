@@ -8,6 +8,7 @@ const db = mongoose.connect(process.env.DB_URI, () => {
 })
 
 const clientSchema = new mongoose.Schema({
+    user: String,
     name: String, 
     surname: String, 
     address: {
