@@ -43,6 +43,7 @@ router.post("/login", redirectHome, async (req, res) => {
     }
 
     if(user[0].name === "admin"){
+        req.session.userId = user[0].id;
         return res.render("admin-home");
     } else {
         req.session.userId = user[0].id;
@@ -237,7 +238,7 @@ router.post("/admin/add-user", async (req, res) => {
     }
 
     console.log("user added successfully");
-    res.redirect("back");
+    res.render("admin-home");
 })
 
 module.exports = router;
