@@ -19,7 +19,7 @@ const redirectLogin = (req, res, next) => {
 
 
 router.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/static/index.html"))
+    res.render("index")
 });
 
 router.get("/admin", (req, res) => {
