@@ -29,7 +29,7 @@ router.get("/admin", (req, res) => {
 
 router.get("/admin/dashboard", redirectLogin, async (req, res) => {
     const findClients = await clients.find({user: req.session.userId});
-    res.render("home", {findClients});
+    res.render("home", {findClients, message: req.flash("success")});
 });
 
 router.get("/admin/dashboard/add-client", redirectLogin, (req, res) => {
