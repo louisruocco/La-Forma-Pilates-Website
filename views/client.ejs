@@ -25,6 +25,9 @@
         <div class="admin-subtitle">
             <h2>Invoices:</h2>
         </div>
+        <% if(message.length > 0){ %>
+            <p class = "success"><%= message %></p>
+        <% } %>
         <ul>
             <% history.forEach(invoice => { %>
                 <li class = "invoice">

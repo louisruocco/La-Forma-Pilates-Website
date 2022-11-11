@@ -111,6 +111,7 @@ router.post("/admin/:name/:surname/:id/edit-invoice", redirectLogin, async (req,
         status: status
     });
 
+    req.flash("success", "Invoice Successfully Updated!");
     res.redirect(`/admin/client/${req.params.name}/${req.params.surname}`);
 
     //add flash message for update successful

@@ -17,9 +17,6 @@ const redirectLogin = (req, res, next) => {
     }
 }
 
-const redirectAdmin = async (req, res, next) => {
-    const admin = await users.find({name: admin})
-}
 
 router.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/static/index.html"))
@@ -32,7 +29,7 @@ router.get("/admin", (req, res) => {
 
 router.get("/admin/dashboard", redirectLogin, async (req, res) => {
     const findClients = await clients.find({user: req.session.userId});
-    res.render("home", {findClients,  message: req.flash("success")});
+    res.render("home", {findClients});
 });
 
 router.get("/admin/dashboard/add-client", redirectLogin, (req, res) => {
@@ -42,7 +39,7 @@ router.get("/admin/dashboard/add-client", redirectLogin, (req, res) => {
 router.get("/admin/client/:name/:surname", redirectLogin, async (req, res) => {
     const person = await clients.find({name: req.params.name, surname: req.params.surname})
     const history = await invoices.find({name: req.params.name, surname: req.params.surname})
-    res.render("client", {person, history});
+    res.render("client", {person, history, message: req.flash("success")});
 });
 
 router.get("/admin/client/:name/:surname/edit-client", redirectLogin, async (req, res) => {
@@ -73,17 +70,5 @@ router.get("/admin/admin-dashboard", redirectLogin, async (req, res) => {
 router.get("/admin/add-user", redirectLogin, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/static/add-user.html"));
 });
-
-router.get("/admin/user/:id", async (req, res) => {
-    const user = await users.findOne({_id: req.params.id});
-    res.render("user", {user});
-});
-
-router.get("/admin/user/:id/change-password", async (req, res) => {
-    const user = await users.findOne({_id: req.params.id});
-    res.render("change-password", {user});
-})
-
-
 
 module.exports = router;
