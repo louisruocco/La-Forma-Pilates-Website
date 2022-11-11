@@ -17,6 +17,10 @@ const redirectLogin = (req, res, next) => {
     }
 }
 
+const redirectAdmin = async (req, res, next) => {
+    const admin = await users.find({name: admin})
+}
+
 router.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/static/index.html"))
 });
@@ -61,7 +65,7 @@ router.get("/:id/delete-client", redirectLogin, async (req, res) => {
     res.render("delete-client", {client});
 })
 
-router.get("/admin/admin-dashboard", async (req, res) => {
+router.get("/admin/admin-dashboard", redirectLogin, async (req, res) => {
     const members = await users.find({})
     res.render("admin-home", {members})
 })
