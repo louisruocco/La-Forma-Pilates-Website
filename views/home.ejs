@@ -23,6 +23,9 @@
     <div class="admin-title">
         <h1>Dashboard</h1>
     </div>
+    <% if(message.length > 0){ %>
+        <p class = "success"><%= message %></p>
+    <% } %>
     <div class="clients">
         <div class="admin-subtitle">
             <h2>Clients</h2>

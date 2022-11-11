@@ -63,7 +63,7 @@ router.post("/logout", (req, res) => {
 });
 
 router.post("/add-client", redirectLogin, async (req, res) => {
-    const { name, surname, street, postcode } = req.body;
+    const { name, surname, email, number, street, postcode } = req.body;
     const client = await clients.find({name: name, surname: surname})
     const user = await users.find({_id: req.session.userId});
 
@@ -73,7 +73,9 @@ router.post("/add-client", redirectLogin, async (req, res) => {
         await clients.create({
             user: user[0]._id,
             name: name, 
-            surname: surname, 
+            surname: surname,
+            email: email, 
+            number: number,
             address: {
                 street: street, 
                 postcode: postcode
@@ -120,17 +122,20 @@ router.post("/:name/:surname/:id/delete-invoice",redirectLogin, async (req, res)
 });
 
 router.post("/admin/client/:id/edit-profile", redirectLogin, async (req, res) => {
-    const { name, surname, street, postcode } = req.body;
+    const { name, surname, email, number, street, postcode } = req.body;
     await clients.updateOne({_id: req.params.id}, {
         name: name, 
-        surname: surname, 
+        surname: surname,
+        email: email, 
+        number: number,
         address: {
             street: street, 
             postcode: postcode
         }
     })
     console.log(postcode);
-    res.send("User credentials successfully updated");
+    req.flash("success", "User Credentials Successfully Updated!");
+    res.redirect("/admin/dashboard");
 });
 
 router.post("/:name/:surname/:id/delete-client", redirectLogin, async (req, res) => {
@@ -182,7 +187,9 @@ router.post("/contact", async (req, res) => {
     } else {
         await clients.create({
             name: name, 
-            surname: surname, 
+            surname: surname,
+            number: number,
+            email: email 
         });
 
         const transporter = nodemailer.createTransport({

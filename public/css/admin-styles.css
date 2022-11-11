@@ -225,6 +225,14 @@
     color: red;
 }
 
+.success {
+    background: seagreen;
+    text-align: center;
+    margin: auto;
+    width: 30%;
+    color: white;
+}
+
 @media screen and (max-width: 768px){
     body {
         overflow-x: hidden;
