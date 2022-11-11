@@ -44,7 +44,7 @@ router.post("/login", redirectHome, async (req, res) => {
 
     if(user[0].name === "admin"){
         req.session.userId = user[0].id;
-        return res.render("admin-home");
+        return res.redirect("/admin/admin-dashboard");
     } else {
         req.session.userId = user[0].id;
         res.redirect("/admin/dashboard");
