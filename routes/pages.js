@@ -60,8 +60,12 @@ router.get("/:id/delete-client", redirectLogin, async (req, res) => {
     res.render("delete-client", {client});
 })
 
+router.get("/admin/admin-dashboard", (req, res) => {
+    res.render("admin-home")
+})
+
 router.get("/admin/add-user", redirectLogin, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/static/add-user.html"));
-})
+});
 
 module.exports = router;
