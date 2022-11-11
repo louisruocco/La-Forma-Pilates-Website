@@ -74,4 +74,16 @@ router.get("/admin/add-user", redirectLogin, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/static/add-user.html"));
 });
 
+router.get("/admin/user/:id", async (req, res) => {
+    const user = await users.findOne({_id: req.params.id});
+    res.render("user", {user});
+});
+
+router.get("/admin/user/:id/change-password", async (req, res) => {
+    const user = await users.findOne({_id: req.params.id});
+    res.render("change-password", {user});
+})
+
+
+
 module.exports = router;

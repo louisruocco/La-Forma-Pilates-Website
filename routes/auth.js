@@ -239,6 +239,14 @@ router.post("/admin/add-user", async (req, res) => {
 
     console.log("user added successfully");
     res.render("admin-home");
+});
+
+router.post("/admin/:id/change-password", async (req, res) => {
+    const { password } = req.body;
+    const user = await users.findOne({_id: req.params.id});
+    const hashedPassword = await bcrypt.hash(password, 8);
+    await user.updateOne({password: hashedPassword});
+    res.redirect("/admin/admin-dashboard");
 })
 
 module.exports = router;

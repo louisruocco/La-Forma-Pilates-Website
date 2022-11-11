@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/admin-styles.css">
-    <title>La Forma Pilates | Admin Dashboard</title>
+    <title>Edit User | <%= user.name %></title>
 </head>
 <body>
     <div class="nav">
         <nav>
             <ul>
-                <li><a href="/admin/add-user">Add User</a></li>
+                <li><a href="/admin/user/<%= user._id %>/change-password">Change Password</a></li>
+                <li><a href=""></a></li>
                 <form action="/auth/logout" method = "POST">
                     <button class = "logout">Logout</button>
                 </form>
@@ -20,14 +21,7 @@
         </nav>
     </div>
     <div class="admin-title">
-        <h1>Admin Dashboard</h1>
-    </div>
-    <div class="users">
-        <ul>
-            <% members.forEach(user => { %>
-                <li><a href="/admin/user/<%= user._id %>"><%= user.name %></a></li>
-            <% }) %>
-        </ul>
+        <h1><%= user.name %></h1>
     </div>
 </body>
 </html>
