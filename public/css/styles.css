@@ -355,6 +355,15 @@ nav {
     transition: .2s ease;
 }
 
+.success {
+    background: seagreen;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    color: white;
+    font-family: TT fors;
+}
+
 @media screen and (max-width: 768px){
     body {
         overflow-x: hidden;

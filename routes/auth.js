@@ -148,52 +148,9 @@ router.post("/:name/:surname/:id/delete-client", redirectLogin, async (req, res)
 router.post("/contact", async (req, res) => {
     const { name, surname, email, number, enquiry } = req.body;
     const client = await clients.find({name: name, surname: surname})
-    if(!client){
-        console.log(client)
-        await clients.create({
-            name: name, 
-            surname: surname,
-            number: number,
-            email: email 
-        });
-    //     const transporter = nodemailer.createTransport({
-    //         service: "outlook.com", 
-    //         auth: {
-    //            user: process.env.EMAIL,
-    //            pass: process.env.PASS
-    //         }
-    //     })
-    
-    //     const html = `
-    //         <h1>${name} ${surname} has sent you a message!</h1>
-    //         <h3>Email Address: ${email}</h3>
-    //         <h3>Phone Number: ${number}</h3>
-    //         <div>
-    //             <h3>Enquiry:</h3>
-    //             <p>${enquiry}</p>
-    //         </div>
-    //     `
-    
-    //     const options = {
-    //         from: process.env.EMAIL,
-    //         to: "louisruocco1@gmail.com",
-    //         subject: `New Enquiry: ${name} ${surname}`, 
-    //         html: html
-    //     };
-    
-    //     transporter.sendMail(options, (err, info) => {
-    //         if(err){
-    //             return console.log(err);
-    //         } else {
-    //             console.log("sent: " + info.response);
-    //         }
-    //     })
-    
-    //     //add flash message for successful email sent
-    
-    //     res.redirect("/#contact");
-        return
-    } else {
+    const rachel = await users.findOne({name: "Rachel"});
+    console.log(rachel);
+    if(client.length > 0){
         const transporter = nodemailer.createTransport({
             service: "outlook.com", 
             auth: {
@@ -227,8 +184,51 @@ router.post("/contact", async (req, res) => {
             }
         })
     
-        //add flash message for successful email sent
-    
+        req.flash("success", "Thank you very much for your enquiry! I will get back to you as soon as possible");    
+        res.redirect("/#contact");
+    } else {
+        await clients.create({
+            user: rachel._id,
+            name: name, 
+            surname: surname, 
+            email: email, 
+            number: number,             
+        })
+
+        const transporter = nodemailer.createTransport({
+            service: "outlook.com", 
+            auth: {
+            user: process.env.EMAIL,
+            pass: process.env.PASS
+            }
+        })
+
+        const html = `
+            <h1>${name} ${surname} has sent you a message!</h1>
+            <h3>Email Address: ${email}</h3>
+            <h3>Phone Number: ${number}</h3>
+            <div>
+                <h3>Enquiry:</h3>
+                <p>${enquiry}</p>
+            </div>
+        `
+
+        const options = {
+            from: process.env.EMAIL,
+            to: "louisruocco1@gmail.com",
+            subject: `New Enquiry: ${name} ${surname}`, 
+            html: html
+        };
+
+        transporter.sendMail(options, (err, info) => {
+            if(err){
+                return console.log(err);
+            } else {
+                console.log("sent: " + info.response);
+            }
+        })
+
+        req.flash("success", "Thank you very much for your enquiry! I will get back to you as soon as possible");    
         res.redirect("/#contact");
     }
 })

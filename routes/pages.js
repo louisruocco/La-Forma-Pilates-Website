@@ -19,7 +19,7 @@ const redirectLogin = (req, res, next) => {
 
 
 router.get("/", (req, res) => {
-    res.render("index")
+    res.render("index", {message: req.flash("success")});
 });
 
 router.get("/admin", (req, res) => {

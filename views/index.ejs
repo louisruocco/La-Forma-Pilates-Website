@@ -139,6 +139,9 @@
             <div class="title1">
                 <h2>Contact</h2>
             </div>
+            <% if(message.length > 0){ %>
+                <p class = "success"><%= message %></p>
+            <% } %>
             <div class="text">
                 <form action="/auth/contact" method = "POST">
                     <div class="client-name-section">
