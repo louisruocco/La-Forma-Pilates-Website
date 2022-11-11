@@ -31,7 +31,13 @@
         <ul>
             <% history.forEach(invoice => { %>
                 <li class = "invoice">
-                    <%= invoice.date %>: <b>£<%= invoice.amount %></b> <span class = "invoice-status"><%= invoice.status %></span>
+                    <p>Date: <%= invoice.date %></p>
+                    <p>Session Duration: <%= invoice.time %></p>
+                    <p><b>£<%= invoice.amount %></b> </p>
+                    <p>Status: <span class = "invoice-status"><%= invoice.status %></span></p>
+
+
+
                     <form action="/auth/<%= invoice.name %>/<%= invoice.surname %>/<%= invoice.id %>/delete-invoice" method = "POST">
                         <a href="/admin/client/<%= invoice.name %>/<%= invoice.surname %>/<%=invoice.id %>/edit-invoice">
                             <i class="fa-solid fa-pen-to-square"></i>

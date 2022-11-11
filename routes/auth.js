@@ -98,8 +98,6 @@ router.post("/admin/client/:name/:surname/add-invoice", redirectLogin, async (re
     });
 
     res.redirect(`/admin/client/${req.params.name}/${req.params.surname}`);
-
-    //add flash messaged for add invoice
 });
 
 router.post("/admin/:name/:surname/:id/edit-invoice", redirectLogin, async (req, res) => {
@@ -113,8 +111,6 @@ router.post("/admin/:name/:surname/:id/edit-invoice", redirectLogin, async (req,
 
     req.flash("success", "Invoice Successfully Updated!");
     res.redirect(`/admin/client/${req.params.name}/${req.params.surname}`);
-
-    //add flash message for update successful
 })
 
 router.post("/:name/:surname/:id/delete-invoice",redirectLogin, async (req, res) => {
@@ -149,7 +145,6 @@ router.post("/contact", async (req, res) => {
     const { name, surname, email, number, enquiry } = req.body;
     const client = await clients.find({name: name, surname: surname})
     const rachel = await users.findOne({name: "Rachel"});
-    console.log(rachel);
     if(client.length > 0){
         const transporter = nodemailer.createTransport({
             service: "outlook.com", 
@@ -245,8 +240,6 @@ router.post("/admin/add-user", async (req, res) => {
             password: hashedPassword
         });
     }
-
-    console.log("user added successfully");
     res.render("admin-home");
 });
 

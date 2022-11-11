@@ -251,6 +251,10 @@
         font-size: 16px;
     }
 
+    .invoice {
+        display: block;
+    }
+
     .clients li, .invoices li {
         font-size: 16px;
         display: block;
