@@ -4,6 +4,7 @@ const clients = require("../db/clients");
 const invoices = require("../db/invoice");
 const dotenv = require("dotenv");
 const path = require("path");
+const users = require("../db/users");
 const router = express.Router();
 
 dotenv.config({path: "./.env"});
@@ -60,8 +61,9 @@ router.get("/:id/delete-client", redirectLogin, async (req, res) => {
     res.render("delete-client", {client});
 })
 
-router.get("/admin/admin-dashboard", (req, res) => {
-    res.render("admin-home")
+router.get("/admin/admin-dashboard", async (req, res) => {
+    const members = await users.find({})
+    res.render("admin-home", {members})
 })
 
 router.get("/admin/add-user", redirectLogin, (req, res) => {
