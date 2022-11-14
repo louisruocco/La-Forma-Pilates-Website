@@ -6,6 +6,7 @@ const bcrypt = require("bcrypt");
 const dotenv = require("dotenv");
 const invoices = require("../db/invoice");
 const nodemailer = require("nodemailer");
+const path = require("path");
 const router = express.Router();
 
 dotenv.config({path: "./.env"});
@@ -107,6 +108,7 @@ router.post("/admin/client/:name/:surname/add-invoice", redirectLogin, async (re
     })
 
     const html = `
+        <img src="cid:logo">
         <h1>${client.name} ${client.surname}'s invoice for ${date}</h1>
         <hr>
         <h2>Amount: £${amount}</h2>
@@ -118,7 +120,12 @@ router.post("/admin/client/:name/:surname/add-invoice", redirectLogin, async (re
         from: process.env.EMAIL,
         to: `${client.email}`,
         subject: `La Forma Pilates Invoice - ${date}: ${client.name} ${client.surname}`, 
-        html: html
+        html: html, 
+        attachments: [{
+            filename: "logo.jpg", 
+            path: path.join(__dirname, "../public/images/background.jpg"), 
+            cid: "logo"
+        }]
     };
 
     transporter.sendMail(options, (err, info) => {
