@@ -117,7 +117,7 @@ router.post("/admin/client/:name/:surname/add-invoice", redirectLogin, async (re
     const options = {
         from: process.env.EMAIL,
         to: `${client.email}`,
-        subject: `Invoice - ${date}: ${client.name} ${client.surname}`, 
+        subject: `La Forma Pilates Invoice - ${date}: ${client.name} ${client.surname}`, 
         html: html
     };
 
