@@ -116,6 +116,7 @@ router.post("/admin/client/:name/:surname/add-invoice", redirectLogin, async (re
         <ul>
             <li>Sort Code: 40-02-35</li>
             <li>Account Number: 81142860</li>
+            <li>Name: Miss R C L Muldoon</li>
         </ul>
         <p>With Many Thanks!</p>
         <p>If you have any queries, please respond to this email</p>
