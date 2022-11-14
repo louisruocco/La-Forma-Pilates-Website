@@ -108,11 +108,16 @@ router.post("/admin/client/:name/:surname/add-invoice", redirectLogin, async (re
     })
 
     const html = `
-        <img src="cid:logo">
         <h1>${client.name} ${client.surname}'s invoice for ${date}</h1>
         <hr>
-        <h2>Amount: £${amount}</h2>
-        <p>Thank you very much for your business! See you on the mat soon</p>
+        <img src="cid:logo">
+        <h2>Total: £${amount}</h2>
+        <h3>Bank Details:</h3>
+        <ul>
+            <li>Sort Code: 40-02-35</li>
+            <li>Account Number: 81142860</li>
+        </ul>
+        <p>With Many Thanks!</p>
         <p>If you have any queries, please respond to this email</p>
     `
 
