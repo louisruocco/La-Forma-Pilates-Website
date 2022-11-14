@@ -88,6 +88,7 @@ router.post("/add-client", redirectLogin, async (req, res) => {
 
 router.post("/admin/client/:name/:surname/add-invoice", redirectLogin, async (req, res) => {
     const { date, time, amount, status } = req.body;
+    const client = await clients.findOne({name: req.params.name, surname: req.params.surname});
     await invoices.create({
         name: req.params.name, 
         surname: req.params.surname, 
@@ -96,6 +97,37 @@ router.post("/admin/client/:name/:surname/add-invoice", redirectLogin, async (re
         amount: amount,
         status: status
     });
+
+    const transporter = nodemailer.createTransport({
+        service: "outlook.com", 
+        auth: {
+           user: process.env.EMAIL,
+           pass: process.env.PASS
+        }
+    })
+
+    const html = `
+        <h1>${client.name} ${client.surname}'s invoice for ${date}</h1>
+        <hr>
+        <h2>Amount: £${amount}</h2>
+        <p>Thank you very much for your business! See you on the mat soon</p>
+        <p>If you have any queries, please respond to this email</p>
+    `
+
+    const options = {
+        from: process.env.EMAIL,
+        to: `${client.email}`,
+        subject: `Invoice - ${date}: ${client.name} ${client.surname}`, 
+        html: html
+    };
+
+    transporter.sendMail(options, (err, info) => {
+        if(err){
+            return console.log(err);
+        } else {
+            console.log("sent: " + info.response);
+        }
+    })
 
     res.redirect(`/admin/client/${req.params.name}/${req.params.surname}`);
 });
