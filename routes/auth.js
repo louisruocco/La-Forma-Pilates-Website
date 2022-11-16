@@ -211,7 +211,7 @@ router.post("/contact", async (req, res) => {
     
         const options = {
             from: process.env.EMAIL,
-            to: "laformapilates@gmail.com",
+            to: process.env.LAFORMAEMAIL,
             subject: `New Enquiry: ${name} ${surname}`, 
             html: html
         };
