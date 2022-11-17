@@ -32,8 +32,17 @@ window.addEventListener("scroll", () => {
         overlay.style.transition = ".5s ease";
         navLinks.classList.remove("nav-active");
     }
-})
+});
 
 burger.addEventListener("click", () => {
     navLinks.classList.toggle("nav-active");
-})
+});
+
+const map = L.map('map').setView([51.650020024605986, -0.17265712127611482], 18);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+const marker = L.marker([51.650020024605986, -0.17265712127611482]).addTo(map);

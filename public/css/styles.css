@@ -376,6 +376,10 @@ nav {
     text-align: center;
 }
 
+#map { 
+    height: 180px; 
+}
+
 @media screen and (max-width: 768px){
     body {
         overflow-x: hidden;
