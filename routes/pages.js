@@ -79,6 +79,10 @@ router.get("/admin/add-user", redirectLogin, (req, res) => {
 router.get("/admin/user/:id/change-password", async (req, res) => {
     const user = await users.findOne({_id: req.params.id});
     res.render("change-password", {user});
+});
+
+router.get("/privacy-policy", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/static/privacy-policy.html"));
 })
 
 module.exports = router;
