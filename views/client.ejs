@@ -29,15 +29,12 @@
             <p class = "success"><%= message %></p>
         <% } %>
         <ul>
-            <% history.forEach(invoice => { %>
+            <% history.reverse().forEach(invoice => { %>
                 <li class = "invoice">
                     <p>Date: <%= invoice.date %></p>
                     <p>Session Duration: <%= invoice.time %></p>
                     <p><b>£<%= invoice.amount %></b> </p>
                     <p>Status: <span class = "invoice-status"><%= invoice.status %></span></p>
-
-
-
                     <form action="/auth/<%= invoice.name %>/<%= invoice.surname %>/<%= invoice.id %>/delete-invoice" method = "POST">
                         <a href="/admin/client/<%= invoice.name %>/<%= invoice.surname %>/<%=invoice.id %>/edit-invoice">
                             <i class="fa-solid fa-pen-to-square"></i>
