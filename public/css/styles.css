@@ -662,10 +662,23 @@ nav {
 
 .policy-text {
     margin: 10%;
-    color: white;
+    color: black;
     text-align: justify;
     padding: 20px;
     background: white;
     border-radius: 10px;
     font-family: 'Poppins', sans-serif;
+}
+
+.policy-text h1, h2, h3, h4 {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.policy-text h3 {
+    font-size: 22px;
+}
+
+.policy-text p {
+    font-size: 18px
 }
